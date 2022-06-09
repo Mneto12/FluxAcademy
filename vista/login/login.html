@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./login.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="signup" class="form">
+            <h1>Login</h1>
+
+            <div class="form-field">
+                <p>Nombre de usuario</p>
+                <input type="text" name="username" id="username" autocomplete="off" placeholder="Ingrese su nombre de usuario">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <p class="password">Contrasena</p>
+                <input type="password" name="password" id="password" autocomplete="off"
+                    placeholder="Ingrese su contrasena">
+                <small></small>
+            </div>
+
+            
+            <div class="form-field">
+                <button type="submit" class="btn" onclick="check(1)">Iniciar sesi&Oacuten</button>
+            </div>
+
+            <div class="form-field formFlex">
+                <a href="./olvido.html" target="_blank">Olvidaste tu contrasena?</a>
+                <a href="./registro.html">No te has registrado?</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

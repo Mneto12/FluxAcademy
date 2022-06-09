@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./login.js"></script>
+</head>
+
+<body>
+    <div class="container container--registro">
+
+        <h1>Registro</h1>
+
+        <form id="signup" class="form form--registro">
+
+            <div class="form-field">
+                <p>Cedula</p>
+                <input type="text" name="cedula" id="cedula" autocomplete="off" placeholder="Ingrese su cedula">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <p>Nombre</p>
+                <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Ingrese su nombre">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <p>Apellido</p>
+                <input type="text" name="apellido" id="apellido" autocomplete="off" placeholder="Ingrese su apellido">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <p class="space">Genero</p>
+                <div class="form-field--genero">
+                    <span>Hombre</span>
+                    <input class="sexo" type="radio" name="sexo" id="hombre" value="hombre">
+    
+                    <span>Mujer</span>
+                    <input class="sexo" type="radio" name="sexo" id="mujer" value="mujer">
+                </div>
+                <small class="error"></small>
+            </div>
+
+            <div class="form-field">
+                <p class="space">Fecha de nacimiento</p>
+                <input type="date" name="date" id="date" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <p class="space">Nombre de usuario</p>
+                <input type="text" name="username" id="username" autocomplete="off" placeholder="Ingrese un nombre de usuario">
+                <small></small>
+            </div>
+    
+            <div class="form-field">
+                <p class="space">Correo</p>
+                <input type="text" name="email" id="email" autocomplete="off" placeholder="Ingrese su correo">
+                <small></small>
+            </div>
+    
+            <div class="form-field">
+                <p class="space">Contraseña</p>
+                <input type="password" name="password" id="password" autocomplete="off"
+                    placeholder="Ingese una contraseña fuerte">
+                <small></small>
+            </div>
+    
+            <div class="form-field">
+                <p class="space">Confirmar contraseña</p>
+                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off"
+                    placeholder="Confirme la contraseña">
+                <small></small>
+            </div>
+
+            <div class="form-field form-field--button ">
+                <button type="submit" class="btn" onclick="check(2)">Registrar</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
