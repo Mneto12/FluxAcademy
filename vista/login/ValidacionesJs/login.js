@@ -12,10 +12,6 @@ const smallSexo = document.querySelector('.error');
 const confirmPasswordEl = document.querySelector('#confirm-password');
 const form = document.querySelector('#signup');
 
-sexoF.checked = false;
-sexoM.checked = false;
-
-
 const check = (prop) => {
     switch (prop) {
         case 1:
@@ -24,9 +20,12 @@ const check = (prop) => {
         case 2:
             registro();
         break;
-        // case 3:
-        //     olvido();
-        // break;
+        case 3:
+            olvido();
+        break;
+        case 4:
+            admin();
+        break;
     }
 }
 
@@ -38,7 +37,7 @@ const login = () => {
         const username = usernameEl.value.trim();
     
         if (!isRequired(username)) {
-            showError(usernameEl, 'Este campo no puede estar vacio.');
+            showError(usernameEl, 'Este campo no puede estar vacio');
         } else {
             showSuccess(usernameEl);
             valid = true;
@@ -52,7 +51,7 @@ const login = () => {
         const password = passwordEl.value.trim();
     
         if (!isRequired(password)) {
-            showError(passwordEl, 'Este campo no puede estar vacio.');
+            showError(passwordEl, 'Este campo no puede estar vacio');
         } else {
             showSuccess(passwordEl);
             valid = true;
@@ -71,6 +70,7 @@ const login = () => {
     
         // Muestra el mensaje de error
         const error = formField.querySelector('small');
+        error.classList.remove("oculto");
         error.textContent = message;
     };
     
@@ -84,6 +84,7 @@ const login = () => {
     
         // hide the error message
         const error = formField.querySelector('small');
+        error.classList.add("oculto");
         error.textContent = '';
     }
     
@@ -102,21 +103,74 @@ const login = () => {
     
         // Envia la petición si el form es valido
         if (isFormValid) {
-    
+            console.log("login user");
+            window.location.reload();
         }
     });
+}
+
+const admin = () => {
     
+    const checkPassword = () => {
     
-    form.addEventListener('input', debounce(function (e) {
-        switch (e.target.id) {
-            case 'username':
-                checkUsername();
-                break;
-            case 'password':
-                checkPassword();
-                break;
+        let valid = false;
+        const password = passwordEl.value.trim();
+    
+        if (!isRequired(password)) {
+            showError(passwordEl, 'Este campo no puede estar vacio');
+        } else {
+            showSuccess(passwordEl);
+            valid = true;
         }
-    }));
+        return valid;
+    };
+
+    const isRequired = value => value === '' ? false : true;
+    
+    const showError = (input, message) => {
+    
+        const formField = input.parentElement;
+    
+        formField.classList.remove('success');
+        formField.classList.add('error');
+    
+        // Muestra el mensaje de error
+        const error = formField.querySelector('small');
+        error.classList.remove("oculto");
+        error.textContent = message;
+    };
+    
+    const showSuccess = (input) => {
+        // get the form-field element
+        const formField = input.parentElement;
+    
+        // remove the error class
+        formField.classList.remove('error');
+        formField.classList.add('success');
+    
+        // hide the error message
+        const error = formField.querySelector('small');
+        error.classList.add("oculto");
+        error.textContent = '';
+    }
+    
+    
+    form.addEventListener('submit', function (e) {
+        // Previene las multiples interacciones al enviar el formulario
+        e.preventDefault();
+    
+    
+        // validar los formularios
+        let isPasswordValid = checkPassword();
+    
+        let isFormValid = isPasswordValid;
+    
+        // Envia la petición si el form es valido
+        if (isFormValid) {
+            console.log("admin");
+            window.location.reload();
+        }
+    });
 }
 
 const registro = () => {
@@ -130,7 +184,7 @@ const registro = () => {
         const cedula = cedulaEl.value.trim();
     
         if (!isRequired(cedula)) {
-            showError(cedulaEl, 'Este campo no puede estar vacio.');
+            showError(cedulaEl, 'Este campo no puede estar vacio');
         } else if (isCedulaValid(cedula) || !isBetween(cedula.length, min, max)) {
             showError(cedulaEl, `Cedula no valida. La cedula debe de tener entre ${min} y ${max} numeros y no puede contener letras.`)
         } else {
@@ -151,7 +205,7 @@ const registro = () => {
         const nombre = nombreEl.value.trim();
     
         if (!isRequired(nombre)) {
-            showError(nombreEl, 'Este campo no puede estar vacio.');
+            showError(nombreEl, 'Este campo no puede estar vacio');
         } else if (!isBetween(nombre.length, min, max)) {
             showError(nombreEl, `El nombre debe estar entre ${min} y ${max} caracteres.`)
         } else {
@@ -171,7 +225,7 @@ const registro = () => {
         const apellido = apellidoEl.value.trim();
     
         if (!isRequired(apellido)) {
-            showError(apellidoEl, 'Este campo no puede estar vacio.');
+            showError(apellidoEl, 'Este campo no puede estar vacio');
         } else if (!isBetween(apellido.length, min, max)) {
             showError(apellidoEl, `El Apelldio debe estar entre ${min} y ${max} caracteres.`)
         } else {
@@ -187,8 +241,7 @@ const registro = () => {
     
         if (sexoM.checked == false && sexoF.checked == false) {
             smallSexo.classList.remove("oculto");
-            showError(sexo, `Debe de seleccionar uno.`)
-            console.log("works")
+            showError(sexo, `Seleccione un genero`)
         } else {
             smallSexo.classList.add("oculto");
             valid = true;
@@ -203,7 +256,7 @@ const registro = () => {
         if (!fecha.value) {
             showError(fecha, 'Seleccione una fecha');
         } else if (calcularEdad(fecha)) {
-            showError(fecha, 'Menor de 18 años')
+            showError(fecha, 'Debe introduccir una fecha valida')
         } else {
             showSuccess(fecha);
             valid = true;
@@ -222,9 +275,9 @@ const registro = () => {
         const username = usernameEl.value.trim();
     
         if (!isRequired(username)) {
-            showError(usernameEl, 'Username cannot be blank.');
+            showError(usernameEl, 'Este campo no puede estar vacio');
         } else if (!isBetween(username.length, min, max)) {
-            showError(usernameEl, `Username must be between ${min} and ${max} characters.`)
+            showError(usernameEl, `El nombre de usuario debe tener entre ${min} y ${max} caracteres`)
         } else {
             showSuccess(usernameEl);
             valid = true;
@@ -236,9 +289,9 @@ const registro = () => {
         let valid = false;
         const email = emailEl.value.trim();
         if (!isRequired(email)) {
-            showError(emailEl, 'Email cannot be blank.');
+            showError(emailEl, 'Este campo no puede estar vacio');
         } else if (!isEmailValid(email)) {
-            showError(emailEl, 'Email is not valid.')
+            showError(emailEl, 'Correo invalido')
         } else {
             showSuccess(emailEl);
             valid = true;
@@ -253,9 +306,9 @@ const registro = () => {
         const password = passwordEl.value.trim();
     
         if (!isRequired(password)) {
-            showError(passwordEl, 'Password cannot be blank.');
+            showError(passwordEl, 'Este campo no puede estar vacio');
         } else if (!isPasswordSecure(password)) {
-            showError(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+            showError(passwordEl, 'La contrasena debe tener al menos 8 caracteres e incluir al menos 1 minuscula, 1 mayuscula, 1 numero y 1 caracter especial (!@#$%^&*)');
         } else {
             showSuccess(passwordEl);
             valid = true;
@@ -271,9 +324,9 @@ const registro = () => {
         const password = passwordEl.value.trim();
     
         if (!isRequired(confirmPassword)) {
-            showError(confirmPasswordEl, 'Please enter the password again');
+            showError(confirmPasswordEl, 'Este campo no puede estar vacio');
         } else if (password !== confirmPassword) {
-            showError(confirmPasswordEl, 'The password does not match');
+            showError(confirmPasswordEl, 'Las contraseñas no coinciden');
         } else {
             showSuccess(confirmPasswordEl);
             valid = true;
@@ -303,11 +356,10 @@ const registro = () => {
         const mesActual = parseInt(fechaActual.getMonth()) + 1;
         const diaActual = parseInt(fechaActual.getDate());
     
-        // 2016-07-11
-        const anoNacimiento = parseInt(String(edadF).substring(0, 4));
-        const mesNacimiento = parseInt(String(edadF).substring(5, 7));
-        const diaNacimiento = parseInt(String(edadF).substring(8, 10));
-    
+        const anoNacimiento = parseInt(String(edadF.value).substring(0, 4));
+        const mesNacimiento = parseInt(String(edadF.value).substring(5, 7));
+        const diaNacimiento = parseInt(String(edadF.value).substring(8, 10));
+
         let edad = anoActual - anoNacimiento;
         if (mesActual < mesNacimiento) {
             edad--;
@@ -316,8 +368,16 @@ const registro = () => {
                 edad--;
             }
         }
+        console.log(anoNacimiento)
+        console.log(mesNacimiento)
+        console.log(diaNacimiento)
+        if(anoActual < anoNacimiento || mesActual < mesNacimiento || diaActual < diaNacimiento) {
+            return false;
+        }
 
-        return edad;
+        if(edad > 18){
+            return edad;
+        }
         
     };
     
@@ -325,14 +385,15 @@ const registro = () => {
     const isBetween = (length, min, max) => length < min || length > max ? false : true;
     
     const showError = (input, message) => {
-        // get the form-field element
+    
         const formField = input.parentElement;
-        // add the error class
+    
         formField.classList.remove('success');
         formField.classList.add('error');
     
-        // show the error message
+        // Muestra el mensaje de error
         const error = formField.querySelector('small');
+        error.classList.remove("oculto");
         error.textContent = message;
     };
     
@@ -346,6 +407,7 @@ const registro = () => {
     
         // hide the error message
         const error = formField.querySelector('small');
+        error.classList.add("oculto");
         error.textContent = '';
     }
     
@@ -378,48 +440,73 @@ const registro = () => {
     
         // submit to the server if the form is valid
         if (isFormValid) {
-            alert("enviado")
+            console.log("enviado")
+            window.location.reload()
         }
     });
+}
+
+const olvido = () => {
+
+    const isRequired = value => value === '' ? false : true;
+
+    const checkEmail = () => {
+        let valid = false;
+        const email = emailEl.value.trim();
+        if (!isRequired(email)) {
+            showError(emailEl, 'Este campo no puede estar vacio');
+        } else if (!isEmailValid(email)) {
+            showError(emailEl, 'Correo invalido')
+        } else {
+            showSuccess(emailEl);
+            valid = true;
+        }
+        return valid;
+    };
+
+    const isEmailValid = (email) => {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    };
+
+    form.addEventListener('submit', function (e) {
+        // Previene las multiples interacciones al enviar el formulario
+        e.preventDefault();
+        // validar los formularios
+        let isEmailValid = checkEmail()
+        let isFormValid = isEmailValid 
     
+        // Envia la petición si el form es valido
+        if (isFormValid) {
+            console.log("Recuperado")
+            window.location.reload()
+        }
+    });
+
+    const showError = (input, message) => {
     
-    // const debounce = (fn, delay = 500) => {
-    //     let timeoutId;
-    //     return (...args) => {
-            
-    //         if (timeoutId) {
-    //             clearTimeout(timeoutId);
-    //         }
-            
-    //         timeoutId = setTimeout(() => {
-    //             fn.apply(null, args)
-    //         }, delay);
-    //     };
-    // };
-    // 
-    // form.addEventListener('input', debounce(function (e) {
-    //     switch (e.target.id) {
-    //         case 'cedula':
-    //             checkCedula();
-    //             break;
-    //         case 'nombre':
-    //             checkNombre();
-    //             break;
-    //         case 'apellido':
-    //             checkApellido();
-    //             break;
-    //         case 'username':
-    //             checkUsername();
-    //             break;
-    //         case 'email':
-    //             checkEmail();
-    //             break;
-    //         case 'password':
-    //             checkPassword();
-    //             break;
-    //         case 'confirm-password':
-    //             checkConfirmPassword();
-    //             break;
-    //     }
-    // }));
+        const formField = input.parentElement;
+    
+        formField.classList.remove('success');
+        formField.classList.add('error');
+    
+        // Muestra el mensaje de error
+        const error = formField.querySelector('small');
+        error.classList.remove("oculto");
+        error.textContent = message;
+    };
+    
+    const showSuccess = (input) => {
+        // get the form-field element
+        const formField = input.parentElement;
+    
+        // remove the error class
+        formField.classList.remove('error');
+        formField.classList.add('success');
+    
+        // hide the error message
+        const error = formField.querySelector('small');
+        error.classList.add("oculto");
+        error.textContent = '';
+    }
 }

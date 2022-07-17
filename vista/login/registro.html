@@ -2,11 +2,17 @@
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Registro de usuario</title>
     <link rel="stylesheet" href="./login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./login.js"></script>
+    <script defer src="./ValidacionesJs/login.js"></script>
+    <script defer src="./ValidacionesJs/OnlyText.js"></script>
+    <script defer src="./ValidacionesJs/OnlyNumbers.js"></script>
+    <!-- Iconos google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
+
+<div class="img--back"></div>
 
 <body>
     <div class="container container--registro">
@@ -16,69 +22,135 @@
         <form id="signup" class="form form--registro">
 
             <div class="form-field">
-                <p>Cedula</p>
-                <input type="text" name="cedula" id="cedula" autocomplete="off" placeholder="Ingrese su cedula">
-                <small></small>
-            </div>
-
-            <div class="form-field">
-                <p>Nombre</p>
-                <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Ingrese su nombre">
-                <small></small>
-            </div>
-
-            <div class="form-field">
-                <p>Apellido</p>
-                <input type="text" name="apellido" id="apellido" autocomplete="off" placeholder="Ingrese su apellido">
-                <small></small>
-            </div>
-
-            <div class="form-field">
-                <p class="space">Genero</p>
-                <div class="form-field--genero">
-                    <span>Hombre</span>
-                    <input class="sexo" type="radio" name="sexo" id="hombre" value="hombre">
-    
-                    <span>Mujer</span>
-                    <input class="sexo" type="radio" name="sexo" id="mujer" value="mujer">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">badge</span>
+                    <p class="space">Cedula</p>
                 </div>
-                <small class="error"></small>
+                <input type="text" name="cedula" id="cedula" autocomplete="off" placeholder="Ingrese su cedula" maxlength="8" onkeypress="return onlyNumberKey(event)">
+                <small class="oculto small">
+                    
+                </small>
             </div>
 
+            <hr class="spacer">
+
             <div class="form-field">
-                <p class="space">Fecha de nacimiento</p>
+                <div class="leyenda">
+                    <span class="material-icons-outlined">face</span>
+                    <p class="space">Nombre</p>
+                </div>
+                <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Ingrese su nombre" onkeypress="return onlyTextKey(event)">
+                <small class="oculto small">
+                    
+                </small>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="form-field">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">face</span>
+                    <p class="space">Apellido</p>
+                </div>
+                <input type="text" name="apellido" id="apellido" autocomplete="off" placeholder="Ingrese su apellido" onkeypress="return onlyTextKey(event)">
+                <small class="oculto small">
+                    
+                </small>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="form-field">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">wc</span>
+                    <p class="space">Genero</p>
+                </div>
+                <div class="form-field--genero">
+                    <span>Masculino</span>
+                    <input class="sexo" type="radio" name="sexo" id="hombre" value="masculino">
+    
+                    <span>Femenino</span>
+                    <input class="sexo" type="radio" name="sexo" id="mujer" value="femenino">
+                </div>
+                <small class="oculto error small">
+                    
+                </small>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="form-field">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">calendar_month</span>
+                    <p class="space">Fecha de nacimiento</p>
+                </div>
                 <input type="date" name="date" id="date" autocomplete="off">
-                <small></small>
+                <small class="oculto small">
+                    
+                </small>
             </div>
 
+            <hr class="spacer">
+
             <div class="form-field">
-                <p class="space">Nombre de usuario</p>
+                <div class="leyenda">
+                    <span class="material-icons-outlined">person</span>
+                    <p class="space">Nombre de usuario</p>
+                </div>
                 <input type="text" name="username" id="username" autocomplete="off" placeholder="Ingrese un nombre de usuario">
-                <small></small>
+                <small class="oculto small">
+                    
+                </small>
             </div>
+
+            <hr class="spacer">
     
             <div class="form-field">
-                <p class="space">Correo</p>
+                <div class="leyenda">
+                    <span class="material-icons-outlined">email</span>
+                    <p class="space">Correo</p>
+                </div>
                 <input type="text" name="email" id="email" autocomplete="off" placeholder="Ingrese su correo">
-                <small></small>
+                <small class="oculto small">
+                    
+                </small>
             </div>
+
+            <hr class="spacer">
     
             <div class="form-field">
-                <p class="space">Contraseña</p>
+                <div class="leyenda">
+                    <span class="material-icons-outlined">password</span>
+                    <p class="space">Contraseña</p>
+                </div>
                 <input type="password" name="password" id="password" autocomplete="off"
                     placeholder="Ingese una contraseña fuerte">
-                <small></small>
-            </div>
-    
-            <div class="form-field">
-                <p class="space">Confirmar contraseña</p>
-                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off"
-                    placeholder="Confirme la contraseña">
-                <small></small>
+                <small class="oculto small">
+                    
+                </small>
             </div>
 
+            <hr class="spacer">
+    
+            <div class="form-field">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">pattern</span>
+                    <p class="space">Confirmar contraseña</p>
+                </div>
+                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off"
+                    placeholder="Confirme la contraseña">
+                <small class="oculto small">
+                    
+                </small>
+            </div>
+
+            <hr class="spacer">
+
             <div class="form-field form-field--button ">
-                <button type="submit" class="btn" onclick="check(2)">Registrar</button>
+                <button type="submit" class="btn" onclick="check(2)">
+                    <span class="material-icons-outlined">add_circle_outline</span>
+                    Registrar
+                </button>
             </div>
 
         </form>

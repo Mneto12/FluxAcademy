@@ -10,13 +10,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 2px solid limegreen; */
 }
 
 
 body {
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
-    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,28 +25,65 @@ body {
     margin: 0;
 }
 
+.img--back {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    opacity: 0.5;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("./img/img_back.jpg");
+}
+
 .container {
-    background-color: #fff;
+    background-color: #1c2833;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     max-width: 1000px;
 }
 
-.oculto {
-    display: none;
+h1, h2 {
+    color: white;
+}
+
+.header--login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.header--login > img {
+    height: 80px;
+    width: 80px;
+}
+
+.header--login > p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30x;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    margin: 5px 0;
 }
 
 .container--registro {
-    width: 900px;
+    max-width: 900px;
 }
 
 .form {
     padding: 10px 20px;
-}
-
-.space {
-    margin-top: 1rem;
+    color: white;
 }
 
 .form--registro {
@@ -63,7 +100,7 @@ body {
 }
 
 .form-field {
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
     margin-right: 10px;
 }
 
@@ -76,7 +113,7 @@ body {
 }
 
 .form-field input {
-    border: solid 2px #3f3f3f;
+    border: solid 2px white;
     border-radius: 3px;
     padding: 12px;
     font-size: 14px;
@@ -96,11 +133,20 @@ body {
     border-color: var(--success-color);
 }
 
-
-.form-field small {
-    color: var(--error-color);
+small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: black;
+    background-color: #dc3545;
+    border-radius: 5px;
 }
 
+.small {
+    margin: 5px 0;
+    text-align: center;
+}
 
 :is(.password, .btn) {
     margin-top: 1rem;
@@ -112,14 +158,23 @@ p {
 
 /* button */
 .btn {
-    padding: 1rem 3rem;
-    background: #007bff;
+    color: white;
     border: none;
-    border-radius: 5px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
+    background-color: transparent;
+    padding: 1rem;
     font-size: 18px;
+    font-weight: bold;
+    margin-block: 1rem;
+    margin-inline: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out all;
+    display: flex;
+    align-items: center;
+}
+
+.btn > span {
+    margin-right: 5px;
 }
 
 .form-field--button {
@@ -127,8 +182,10 @@ p {
 }
 
 .btn:hover {
-    background: #0069d9;
-    cursor: pointer;
+    transition: 0.25s ease-in-out all;
+    /* box-shadow: 5px 4px 11px 1px rgba(0,0,0,0.51); */
+    color: black;
+    background-color: white;
 }
 
 .btn:focus {
@@ -140,4 +197,57 @@ p {
 .form-field--genero {
     margin-top: 11px;
     display: flex;
+}
+
+/* leyenda e iconos registro */
+
+.leyenda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.leyenda > span {
+    margin-right: 10px;
+}
+
+/* Spacer */
+
+.spacer {
+    margin: 1.500rem 0;
+    background-color: black;
+    opacity: 0.2;
+}
+
+/* media queries */
+
+@media (min-width: 750px) {
+
+    .spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 2rem 0;
+    }
+
+    .form--registro {
+        width: 450px;
+        display: block;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .form--registro {
+        width: 300px;
+    }
+}
+
+.oculto {
+    display: none;
 }

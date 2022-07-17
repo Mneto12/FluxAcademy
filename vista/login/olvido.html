@@ -2,25 +2,37 @@
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Recuperar contraseña</title>
     <link rel="stylesheet" href="./login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./login.js"></script>
+    <script defer src="./ValidacionesJs/"></script>
+    <!-- Iconos google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
+
+<div class="img--back"></div>
 
 <body>
     <div class="container">
         <form id="signup" class="form">
-            <h1>Recuperar contrasena</h1>
+            <h1>Recuperar contraseña</h1>
 
             <div class="form-field">
-                <p>Correo</p>
+                <div class="leyenda">
+                    <span class="material-icons-outlined">email</span>
+                    <p class="space">Correo</p>
+                </div>
                 <input type="text" name="email" id="email" autocomplete="off" placeholder="Ingresa tu correo">
-                <small></small>
+                <small class="oculto small">
+                    
+                </small>
             </div>
 
             <div class="form-field">
-                <button type="submit" class="btn" onclick="check(3)">Recuperar</button>
+                <button type="submit" class="btn" onclick="check(3)">
+                    <span class="material-icons-outlined">restart_alt</span>
+                    Recuperar
+                </button>
             </div>
 
         </form>
