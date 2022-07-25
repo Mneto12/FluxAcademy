@@ -73,10 +73,10 @@ if(isset($_SESSION['nombredelusuario'])){
 
 if(isset($_POST['btningresar'])){
     
-    $localhost ="bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com";
-    $username = "ul2al2uqhs423cdd";
-    $password = "5CIsbSldPfe9YeAlC7ZW";
-    $database = "bfcbdvyi6ggtzay9cgor";
+    $dbhost ="bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com";
+    $dbuser = "ul2al2uqhs423cdd";
+    $dbpass = "5CIsbSldPfe9YeAlC7ZW";
+    $dbname = "bfcbdvyi6ggtzay9cgor";
 
     $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
