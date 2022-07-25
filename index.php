@@ -1,238 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Flux Academy</title>
-        <!-- Favicon-->
-        <link rel="icon" href="./vista/login/img/favicon.ico" type="image/x-icon">
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="assets/css/styles.css" rel="stylesheet" />
-        <!-- Estilos sin bootstrap -->
-        <link href="assets/css/estilos.css" rel="stylesheet" />
-        <!-- Animate AOS -->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <!-- Estilos Acordeon -->
-        <link rel="stylesheet" href="assets/css/acordeon.css">
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="barra--nav navbar navbar-expand-lg navbar-dark">
-            <div class="container px-5">
-                <img class="icon" src="./assets/img/icon.png" alt="">
-                <a class="navbar-brand" href="#!">Flux Academy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inscríbete hoy</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="/vista/login/login.php">Acceso a Estudiantes</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Header-->
-        <header class="hero bg-dark py-5">
-            <div class="container px-5" data-aos="fade-up">
-                <div class="hero--title row gx-5 justify-content-start">
-                    <div class="col-lg-6">
-                        <div class="my-5">
-                            <h1 class="display-5 fw-bolder text-white mb-2">Aprende de expertos,</h1>
-                            <h1 class="display-5 fw-bolder text-white mb-2">conviértete en uno</h1>
-                            <p class="text--hero lead text-white mb-4">Certifícate con contenido de alta calidad académica, clases en vivo y la mejor experiencia de aprendizaje online diseñada para que cumplas tus objetivos profesionales.</p>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-start">
-                                <a class="btn btn--inscribete btn-primary btn-lg px-4 me-sm-3" href="/vista/login/registro.php">Inscríbete hoy</a>
-                                <a class="btn btn-outline-light btn-lg px-4" href="#features">Descubre Flux Academy</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Features section-->
-        <section class="py-5" id="features">
-            <div class="container px-5 my-5" data-aos="fade-up">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0 d-flex flex-column align-items-center">
-                        <div class="icons--features feature text-white rounded-3 mb-3"><i class="icons--features bi bi-hourglass-split"></i></div>
-                        <h2 class="h4 fw-bolder">Contenido de calidad</h2>
-                        <p class="text-center">Formación educativa de alto rigor académico, en permanente actualización, creada por expertos y un método de aprendizaje que sí funciona.</p>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0 d-flex flex-column align-items-center">
-                        <div class="icons--features feature text-white rounded-3 mb-3"><i class="icons--features bi bi-award"></i></div>
-                        <h2 class="h4 fw-bolder">Clases en vivo ilimitadas</h2>
-                        <p class="text-center">Adquiere nuevas habilidades todos los días, en sesiones interactivas con profesionales destacados de diferentes industrias.</p>
-                    </div>
-                    <div class="col-lg-4 d-flex flex-column align-items-center">
-                        <div class="icons--features feature text-white rounded-3 mb-3"><i class="icons--features bi bi-telephone"></i></div>
-                        <h2 class="h4 fw-bolder">De la mano de expertos</h2>
-                        <p class="text-center">Consolida tus conocimientos acompañado de expertos disponibles para ti en clases, vía chat, foros y más, resuelve tus dudas y recibe asesoría.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Pricing section-->
-        <section class="bg-light py-5">
-            <div class="container px-5 my-5" data-aos="fade-up">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder">Flux Academy: Cursos online con certificado en las habilidades más demandadas</h2>
-                </div>
-            </div>
-            <div class="container" data-aos="fade-up">
-                <img class="image--guy" src="./assets/img/fluxacademy.png" alt="">
-            </div>
-        </section>
-        <!-- Testimonials section-->
-        <section class="py-5">
-            <div class="container px-5 my-5 px-5" data-aos="fade-up">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder">Los estudiantes que cambiaron su futuro profesional</h2>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="cards d-flex">
-                        <!-- Testimonial 1-->
-                        <div class="card">
-                            <div class="header--card">
-                                <img src="./assets/img/testimonials-1.jpeg" alt="">
-                            </div>
-                            <div class="body--card">
-                                <p class="subtitle">Maria Jose</p>
-                                <p>"La plataforma es muy entretenida y con contenido de alto valor. Los videos y las pruebas son muy llamativas, es chevere tener esa interacción, eso es algo muy positivo"</p>
-                                <p class="subtitle">Maracaibo | Venezuela</p>
-                            </div>
-                            <div class="footer--card">
-                                <i class="bi bi-shop"></i>
-                                <p>Marketing Digital</p>
-                            </div>
-                        </div>
-                        <!-- Testimonial 2-->
-                        <div class="card">
-                            <div class="header--card">
-                                <img src="./assets/img/testimonials-2.jpeg" alt="">
-                            </div>
-                            <div class="body--card">
-                                <p class="subtitle">Carlos Rodriguez</p>
-                                <p>"Procuro terminar 6 cursos porque son de un contenido muy rico, actualizado y bien desarrollado con facilidad para seguir con el apoyo de los videos y clases en linea"</p>
-                                <p class="subtitle">Maracaibo | Venezuela</p>
-                            </div>
-                            <div class="footer--card">
-                                <i class="bi bi-gear"></i>
-                                <p>Ingeniería industrial</p>
-                            </div>
-                        </div>
-                        <!-- Testimonial 3-->
-                        <div class="card">
-                            <div class="header--card">
-                                <img src="./assets/img/testimonials-3.jpeg" alt="">
-                            </div>
-                            <div class="body--card">
-                                <p class="subtitle">Andrea Sutherland</p>
-                                <p>"Lo que mas me gusta es que voy a mi ritmo, ni muy rapido ni muy despacio y eso es ideal para mi. Flux Academy es una gran opción"</p>
-                                <p class="subtitle">Valencia | Venezuela</p>
-                            </div>
-                            <div class="footer--card">
-                                <i class="bi bi-file-earmark-code"></i>
-                                <p>Desarrollo Web</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Acordeon questions section-->
-        <section class="bg-light py-5">
-            <div class="container px-5 my-5" data-aos="fade-up">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder">¿Dudas? ¡Acláralas con nuestras
-                        preguntas frecuentes!</h2>
-                </div>
-            </div>
-            <div class="container" data-aos="fade-up">
-                <div class="half">
-                    <!-- question 1 -->
-                    <div class="tab">
-                        <input id="tab-one" type="checkbox" name="tabs">
-                        <label for="tab-one">¿Qué es Flux Academy?</label>
-                        <div class="tab-content">
-                            <p>Flux Academy es una plataforma de cursos que nació de forma presencial e hibrida. Nuestro método cuenta con 3 pilares fundamentales que te ayudarán a lograr la fluidez académica que necesitas:</p>
-                            <p>Clases en vivo Ilimitadas 24/7: En estas sesiones de grupos pequeños de alumnos, mejorarás tus habilidades mientras interactúas con el profesor y otros estudiantes. Lecciones: Combinamos la teoría y la práctica con ejercicios interactivos que harán tu proceso de aprendizaje más eficiente y entretenido.</p>
-                            <p>Prácticas: Disfruta de herramientas  en nuestra plataforma. Podrás practicar con ellas todas las veces que quieras para mejorar distintas áreas de tu aprendizaje.</p>
-                        </div>
-                    </div>
-                    <!-- question 2 -->
-                    <div class="tab">
-                      <input id="tab-two" type="checkbox" name="tabs">
-                      <label for="tab-two">¿Cómo puedo inscribirme?</label>
-                      <div class="tab-content">
-                        <p>¡Empezar tu camino hacia la fluidez en Flux Academy es muy fácil! Ingresa tus datos en el formulario de inscripción de nuestra web. Luego podrás acceder a los cursos que tenemos para ti.</p>
-                      </div>
-                    </div>
-                    <!-- question 3 -->
-                    <div class="tab">
-                        <input id="tab-three" type="checkbox" name="tabs">
-                        <label for="tab-three">¿Cómo funciona la plataforma?</label>
-                        <div class="tab-content">
-                          <p>Una vez que te conviertes en estudiante, a traves de la plataforma podrás encontrar la opción “Explorar cursos” que encuentras en tu perfil. Esto te permitirá conocer más de nuestra metodología y de nuestras herramientas.</p>
-                        </div>
-                      </div>
-                      <!-- question 4 -->
-                    <div class="tab">
-                        <input id="tab-four" type="checkbox" name="tabs">
-                        <label for="tab-four">¿Qué necesito para utilizar la plataforma Flux Academy?</label>
-                        <div class="tab-content">
-                          <p>Solo necesitas una computadora, o tablet, y conexión a Internet para ingresar a nuestra plataforma También necesitas tener la aplicación Zoom instalada en tus dispositivos, unos audífonos y un micrófono en caso de nuestros cursos 100% on line.</p>
-                        </div>
-                      </div>
-                      <!-- question 5 -->
-                    <div class="tab">
-                        <input id="tab-five" type="checkbox" name="tabs">
-                        <label for="tab-five">¿Es fácil usar la plataforma de aprendizaje?</label>
-                        <div class="tab-content">
-                          <p>¡Nuestra plataforma es amigable y muy fácil de usar! Además, cuando actives tu curso, tendrás un tour completo, a través de una videollamada, en el que uno de nuestros asesores te enseñará cómo usar nuestras herramientas y todo lo que necesitas saber para aclarar tus dudas con nuestro equipo de soporte, cómo asistir a tus clases en vivo y mucho más.</p>
-                        </div>
-                      </div>
-                      <!-- question 6 -->
-                    <div class="tab">
-                        <input id="tab-six" type="checkbox" name="tabs">
-                        <label for="tab-six">¿Flux Academy es una plataforma de cursos con certificado?</label>
-                        <div class="tab-content">
-                          <p>Sí. Cada vez que avances de nivel recibirás un certificado que reconoce tu rendimiento y desempeño en el curso.</p>
-                        </div>
-                      </div>
-                      <!-- question 7 -->
-                    <div class="tab">
-                        <input id="tab-seven" type="checkbox" name="tabs">
-                        <label for="tab-seven">¿En cuánto tiempo voy a aprender mis cursos con Flux Academy?</label>
-                        <div class="tab-content">
-                          <p>En Flux Academy cada cursos tiene sus tiempos de duración que puede variar según el tópico o su modalidad.</p>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Flux Academy</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-            <script>
-                AOS.init({
-                    delay: 200,
-                    duration: 600,
-                    once: true,
-                });
-            </script>
-    </body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../assets/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../assets/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../assets/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="/vista/index.php" class="nav-link">Nosotros</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contactanos</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item" style="padding-right: 5px">
+          <a class="nav-link btn btn-block btn-primary btn-sm" href="/vista/login/login.php" role="button">
+            <i class="fas"> Login</i>
+          </a>
+        </li>
+        <li class="nav-item"  style="padding-right: 5px">
+          <a class="nav-link btn btn-block btn-success btn-sm" data-widget="fullscreen" href="#" role="button">
+            <i class="fas"> Registro</i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    
+
+    <!-- Content Wrapper. Contains page content -->
+    <div >
+      <!-- Main content -->
+      <section class="col-md-12">
+
+        <div class="row" id="contenido_principal">
+          <div class="col-md-12">
+            <h1>INICIO</h1>
+            <!-- /.card -->
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.2.0
+      </div>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="../assets/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    function cargar_contenido(contenedor, contenido) {
+      $("#" + contenedor).load(contenido);
+    }
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../assets/plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../assets/plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../assets/plugins/moment/moment.min.js"></script>
+  <script src="../assets/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../assets/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../assets/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../assets/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../assets/js/pages/dashboard.js"></script>
+</body>
+
 </html>

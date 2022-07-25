@@ -55,7 +55,7 @@
             <div class="form-field formFlex">
                 <a href="./olvido.html" target="_blank">¿Olvidaste tu contraseña?</a>
                 <a href="./registro.php">Registro</a>
-                <a href="./admin.html">Entrar como administrador</a>
+                <a href="./admin.php">Entrar como administrador</a>
             </div>
         </form>
     </div>
@@ -73,10 +73,10 @@ if(isset($_SESSION['nombredelusuario'])){
 
 if(isset($_POST['btningresar'])){
     
-    $dbhost="bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com";
-    $dbuser="ul2al2uqhs423cdd";
-    $dbpass="5CIsbSldPfe9YeAlC7ZW";
-    $dbname="bfcbdvyi6ggtzay9cgor";
+    $dbhost="localhost";
+    $dbuser="root";
+    $dbpass="";
+    $dbname="cursonline";
 
     $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
