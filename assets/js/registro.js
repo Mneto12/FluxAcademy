@@ -12,7 +12,7 @@ function submitForm() {
         if (jsonData.success == "1") {
          alert("Se realizo el registro correctamente");
           document.getElementById("formUsuario").reset();
-          location.href = "./login.php"
+  //location.reload();
         } else {
           alert("Error debe completar todos los campos");
         }

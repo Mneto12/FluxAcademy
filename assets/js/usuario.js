@@ -21,7 +21,7 @@ function submitForm() {
       },
     });
     uploadFile();
-}
+  }
   
   async function uploadFile() {
     let formData = new FormData(); 

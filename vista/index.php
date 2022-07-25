@@ -10,7 +10,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flux Academy - Dashboard</title>
+  <title>AdminLTE 3 | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -123,7 +123,7 @@ if(isset($_POST['btncerrar']))
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="../vista/index.php" class="brand-link">
+      <a href="/" class="brand-link">
         <img src="../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Flux Academy</span>
       </a>
@@ -210,13 +210,29 @@ if(isset($_POST['btncerrar']))
                 </p>
               </a>
             </li>
+            <li class="nav-header">Reportes</li>
             <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','admin/reportes.php')" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
+              <a href="pages/widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
                 <p>
-                  Reportes
+                  Generar Reportes
+                  <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/vista/reportesFPDF/reporteUsuario.php" target="_blank" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Reporte de Usuarios</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/vista/reportesFPDF/reporteCurso.php" target="_blank" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Reporte de Cursos</p>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

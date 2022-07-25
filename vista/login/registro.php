@@ -102,7 +102,7 @@
                     <span class="material-icons-outlined">email</span>
                     <p class="space">Correo</p>
                 </div>
-                <input type="text" name="correo" id="correo" autocomplete="off" placeholder="Ingrese su correo">
+                <input type="email" name="correo" id="correo" autocomplete="off" placeholder="Ingrese su correo">
                 <small class="oculto small">
 
                 </small>
@@ -147,7 +147,7 @@
             </div>
 
             <div class="form-field">
-                <button type="button" name="guardar" class="btn" onclick="RegistroUser()">Registrar</button>
+                <button type="button" name="guardar" class="btn" onclick="submitForm()">Registrar</button>
             </div>
             <div class="form-field">
                 <button type="button" name="guardar" class="btn" onclick="cambia_de_pagina()">Cancelar</button>
@@ -156,47 +156,16 @@
         </form>
 
     </div>
-    <!-- <script src="../../assets/js/registro.js"></script> -->
+    <script src="../../assets/js/registro.js"></script>
     <script src="../../assets/js/jquery-3.5.1.js"></script>
 
     <script>
         function cambia_de_pagina() {
-            location.href = "./login.php"
+            location.href = "/"
         }
-        function RegistroUser() {
-            var blobFile = document.getElementById("filechooser").files[0];
-            
-            $("#imagen").val(blobFile.name);
-
-                $.ajax({
-                type: "POST",
-                url: "../../modelo/usuarios/add.php",
-                data: $("#formUsuario").serialize(),
-                success: function (response) {
-                    var jsonData = JSON.parse(response);
-                    if (jsonData.success != "1") {
-                    alert("Se realizo el registro correctamente");
-                    document.getElementById("formUsuario").reset();
-                    location.href = "./login.php"
-                    } else {
-                    alert("Error debe completar todos los campos");
-                    }
-                },
-                });
-                uploadFile();
-            }
-
-                
-            async function uploadFile() {
-                let formData = new FormData(); 
-                formData.append("file", filechooser.files[0]);
-                await fetch('../../modelo/usuarios/upload.php', {
-                method: "POST", 
-                body: formData
-                }); 
-            }
-            
     </script>
+
+
 </body>
 
 </html>
