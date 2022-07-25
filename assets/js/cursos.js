@@ -16,7 +16,6 @@ function submitForm() {
         $("#modalForm").modal("hide");
         document.getElementById("formCursos").reset();
         $("#contenido_principal").load('admin/listar_cursos.php');
-        location.href = "./login.php"
       } else {
         alert("Error debe completar todos los campos");
       }
