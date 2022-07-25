@@ -161,7 +161,7 @@
 
     <script>
         function cambia_de_pagina() {
-            location.href = "/"
+            location.href = "./login.php"
         }
     </script>
 
