@@ -15,7 +15,7 @@
 
 <body>
     <div class="container container--login">
-        <form id="signup" class="form form--login" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>">
+        <form id="signup" class="form form--login" method="POST" action="">
             <h1>Admin</h1>
 
             <div class="form-field">
@@ -32,7 +32,7 @@
 
             
             <div class="form-field">
-                <button type="submit" class="btn">
+                <button type="button" class="btn" onclick="admin()">
                     <span class="material-icons-outlined">login</span>
                     Iniciar sesion
                 </button>
@@ -43,11 +43,17 @@
 
 </html>
 
-<?php 
-if($_POST['submit'] == 123456789){
-    header("location: ../index2.php");
-}else{
-    echo ('<script> alert("Error!: Clave de administrador incorrecta.") </script>');
-}
+<script text="text/javascript">
 
-?>
+
+    function admin(){
+
+        let  clave = document.getElementById("password").value;
+        if(clave == 123456789){
+            location.href = "/vista/index2.php"
+        }else{
+            alert("Error!: Clave de administrador invalidad.")
+        }
+    }
+
+</script>

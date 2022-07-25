@@ -10,7 +10,9 @@ $start = ($page > 1) ? ($page * $perPage) - $perPage : 0;
 
 //$query = "select * from cursos order by idCurso desc limit ".$start." , ".$perPage." ";
 
-$query = "SELECT * FROM cursos WHERE cursos.idCurso NOT IN(SELECT cursos.idCurso FROM cursos, matricula WHERE cursos.idCurso=matricula.idCurso) order by cursos.nombre_curso";
+$query = "SELECT * FROM cursos WHERE cursos.idCurso 
+NOT IN (SELECT matricula.idCurso FROM matricula WHERE matricula.idUsuario = ".$_SESSION['idUsuario'].")
+order by cursos.nombre_curso";
 
 $total = $mysqli->query("select * from cursos order by idCurso desc")->num_rows;
 $pages = ceil($total / $perPage);

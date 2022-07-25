@@ -113,7 +113,7 @@ if(isset($_POST['btncerrar']))
         <ul class="navbar-nav ml-auto">
           <!-- Navbar Search -->
           <li class="nav-item" style="padding-right: 20px ;">
-            <input class="fas bg-teal color-palette btn-sm" type="submit" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" value="Cerrar sesión" name="btncerrar" />
+            <input class="bg-teal color-palette btn-sm" type="submit" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" value="Cerrar sesión" name="btncerrar" />
           </li>
         </ul>
       </nav>
