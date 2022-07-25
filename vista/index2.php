@@ -84,7 +84,7 @@
             <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link">Contactanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="https://issuu.com/miguelurd/docs/manual_del_analista_-_ing._software_ii" target="_blank" class="nav-link">Ayuda</a>
+            <a href="https://flipbookpdf.net/web/site/a2964cc43f1420f7ec34a9daba18b393fe716970202207.pdf.html" target="_blank" class="nav-link">Ayuda</a>
           </li>
         </ul>
         <!-- Right navbar links -->
