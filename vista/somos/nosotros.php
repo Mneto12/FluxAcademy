@@ -156,7 +156,7 @@
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div>
-                                <a href="../somos/userpdf.php">E-manual de usuario</a>
+                                <a onclick="cargar_contenido('contenido_principal','somos/userpdf.php')" class="nav-link">E-manual de usuario</a>
                                 &middot;
                                 <a href="#">Flux Academy</a>
                             </div>
