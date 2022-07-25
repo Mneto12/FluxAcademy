@@ -73,10 +73,10 @@ if(isset($_SESSION['nombredelusuario'])){
 
 if(isset($_POST['btningresar'])){
     
-    $dbhost="localhost";
-    $dbuser="root";
-    $dbpass="";
-    $dbname="cursonline";
+    $localhost ="bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com";
+    $username = "ul2al2uqhs423cdd";
+    $password = "5CIsbSldPfe9YeAlC7ZW";
+    $database = "bfcbdvyi6ggtzay9cgor";
 
     $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
