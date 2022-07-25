@@ -39,7 +39,7 @@ function GuadarEdit() {
      $("#video").attr("src","../../assets/img/"+"");
      $("#modalEdit").modal("close");
      document.getElementById("formEdit").reset();
-     location.reload();
+     $("#contenido_principal").load('curso/cursosusuario.php');
   }
 
   

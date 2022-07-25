@@ -42,28 +42,6 @@
 
 </head>
 
-<?php
-
-session_start();
-
-if(isset($_SESSION['nombredelusuario']))
-{
-	$usuarioingresado = $_SESSION['nombredelusuario'];
-  $usuarioid = $_SESSION['idUsuario'];
-  $nombreyapellido = $_SESSION['nombreyapellido'];
-}
-else
-{
-	header('location: /vista/login/login.php');
-}
-
-if(isset($_POST['btncerrar']))
-{
-	session_destroy();
-	header('location: /vista/login/login.php');
-}
-?>
-
 <body class="hold-transition sidebar-mini layout-fixed">
 
 
@@ -106,14 +84,14 @@ if(isset($_POST['btncerrar']))
             <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link">Contactanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link">Ayuda</a>
+            <a href="https://issuu.com/miguelurd/docs/manual_del_analista_-_ing._software_ii" target="_blank" class="nav-link">Ayuda</a>
           </li>
         </ul>
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
           <!-- Navbar Search -->
           <li class="nav-item" style="padding-right: 20px ;">
-            <input class="fas bg-teal color-palette btn-sm" type="submit" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" value="Cerrar sesión" name="btncerrar" />
+            <a href="../index.php" class="bg-teal color-palette btn-sm" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Cerrar Sesión</a>
           </li>
         </ul>
       </nav>
@@ -124,7 +102,7 @@ if(isset($_POST['btncerrar']))
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="../vista/index.php" class="brand-link">
+      <a href="#" class="brand-link">
         <img src="../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Flux Academy</span>
       </a>
@@ -133,9 +111,6 @@ if(isset($_POST['btncerrar']))
       <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-          </div>
           <div class="info">
             <a href="#" class="d-block">Administrador</a>
           </div>
@@ -147,36 +122,14 @@ if(isset($_POST['btncerrar']))
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="index.php" class="nav-link active bg-teal color-palette">
+              <a href="index2.php" class="nav-link active bg-teal color-palette">
                 <i class="nav-icon fas fa-solid fa-bahai"></i>
                 <p>
                   Inicio
                 </p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
-                <i class="nav-icon fas fa-user"></i>
-                <p>
-                  Usuario
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a onclick="cargar_contenido('contenido_principal','usuario/perfil_usuario.php')" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Mi Perfil</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a onclick="cargar_contenido('contenido_principal','curso/cursosusuario.php')" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Mis cursos</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
+            <li class="nav-header">VISUALIZADOR</li>
             <li class="nav-item">
               <a onclick="cargar_contenido('contenido_principal','curso/cursos.php')" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
@@ -211,10 +164,10 @@ if(isset($_POST['btncerrar']))
                 </p>
               </a>
             </li>
-            <li class="nav-header">Reportes</li>
+            <li class="nav-header">REPORTES</li>
             <li class="nav-item">
               <a href="pages/widgets.html" class="nav-link">
-                <i class="nav-icon fas fa-user"></i>
+                <i class="nav-icon fas fa-server"></i>
                 <p>
                   Generar Reportes
                   <i class="fas fa-angle-left right"></i>
@@ -255,9 +208,9 @@ if(isset($_POST['btncerrar']))
           </div>
         
           <div class="col-md-6 dashboard--hijo">
-            <h1>¡Bienvenido, <?php echo ($nombreyapellido) ?>!</h1>
-            <p>Gracias por ser parte de la familia Flux Academy</p>
-            <p>¡Empieza a creecer ahora mísmo!</p>
+            <h1>¡Bienvenido Administrador!</h1>
+            <p>Utiliza las herramientas correctamente y recuerda siempre es necesario:</p>
+            <p>¡Mantener la integridad de los datos!</p>
             <button class="btn btn-primary btn-lg px-4 me-sm-3" onclick="cargar_contenido('contenido_principal','curso/cursos.php')"> Explorar cursos</button>
             <!-- /.card -->
           </div>
