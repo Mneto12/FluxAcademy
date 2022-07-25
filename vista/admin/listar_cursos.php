@@ -1,81 +1,137 @@
-<div class="card">
-    <div class="card-header">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Open modal for @mdo</button>
-    
+<!-- Comienza la edicion de la pagina  -->
+<div class="card col-md-12">
+  <div class="card-header bg-teal color-palette">
+    <h1>Listado de Usuarios</h1>
+  </div>
+
+  <div class="card-body">
+    <div class="row col-lg-12">
+      <div class="col-lg-12" style="text-align: right;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">
+          Registrar Curso
+        </button>
+      </div>
+      <!--- Cargar la lista a desplegar -->
+      <div class="col-lg-8">
+        <div class="d-flex justify-content-end">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <?php
+              require_once("../../modelo/cursos/listar.php");
+              ?>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Generar las tabla de registros --->
+      <div class="col-lg-12">
+        <table class="table table-hover" id="tablaCursos">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Imagen</th>
+              <th>Nombre del Curso</th>
+              <th>Duración (Horas)</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <img class="
+                            <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="#" class="thumbnail">
+              <img data-src="#" alt="">
+            </a>
+      </div>
+
+      <?php
+
+      foreach ($curso as $cursos) {
+        echo ('<tr>');
+        echo ('<th scope="row">' . $cursos['idCurso'] . '</th>');
+        echo ('<td>  <img  style="width:140px ; height:100px" sizes="10px"  src="../../assets/img/' . $cursos['imagen'] . '"></td>');
+        echo ('<td>' . $cursos['nombre_curso'] . '</td>');
+        echo ('<td>' . $cursos['duracion'] . '</td>');
+        echo ('<td>');
+        echo ('<div class="btn-group"');
+        echo ('<div>');
+        echo ('<button name="detalles" class="btn btn-primary"  data-toggle="modal" 
+                                   data-target="#modalDetalles" onclick="mostrarDetalles(' . $cursos['idCurso'] . ')">
+                                   <i class="fas fa-list-ul"></i></button>');
+        echo ('<button name="edit" class="btn btn-success"  data-toggle="modal" 
+                                   data-target="#modalEdit" onclick="EditCurso(' . $cursos['idCurso'] . ')">
+                                   <i class="far fa-edit"></i></button>');
+        echo ('<button name="borrar" class="btn btn-danger"
+                                   onclick="borrarCurso(' . $cursos['idCurso'] . ')">
+                                   <i class="far fa-trash-alt"></i></button>');
+        echo ('</div>');
+        echo ('</div>');
+        echo ('</td>');
+        echo ('</tr>');
+      }
+      ?>
+
+      </tbody>
+      </table>
+
     </div>
-    <!-- /.card-header -->
-    <div class="card-body">
-        <table id="example" class="ui celled table" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Imagen</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Duración</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if (!empty($datos))
-                    foreach ($datos as $key => $value)
-                        foreach ($value as $v) : ?>
-                    <tr>
-                        <td><?php echo $v['id'] ?></td>
-                        <td><img src="../../assets/img/<?php echo $v['imagen'] ?>" width="100px"></td>
-                        <td><?php echo $v['nombre_curso'] ?></td>
-                        <td><?php echo $v['descripcion'] ?></td>
-                        <td><?php echo $v['duracion'] ?></td>
-                        <td>
-                            <a href="/index.php?m=editar&id=<?php echo $v['id'] ?>"></a>
-                            <a href="/index.php?m=eliminar&id=<?php echo $v['id'] ?>"></a>
-                        </td>
-                    </tr>
-                <?php endforeach ?>
-            </tbody>
-        </table>
-        <script>
-            $(document).ready(function() {
-                $('#example').DataTable();
-            });
-        </script>
-    </div>
-    <!-- /.card-body -->
-    <!-- Modal -->
-    <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+  </div>
+  <!-- Termina la edicion de la pagina  -->
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Creación de los modal para el CRUD  -->
+<!-- Modal Crear -->
+<div class="modal" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Registrar Curso</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form action="/vista/admin/index.php?m=guardar" method="get">
+        <form method="POST" id="formCursos" enctype="multipart/form-data">
           <div class="form-group">
-            <label for="nombre_curso" class="col-form-label">Nombre del Curso: </label>
-            <input type="text" class="form-control" id="nombre_curso" name="nombre_curso">
-          </div>
-          <div class="form-group">
-            <label for="descripcion" class="col-form-label">Descripción: </label>
-            <input type="text" class="form-control" id="descripcion" name="descripcion">
-          </div>
-          <div class="form-group">
-            <label for="duracion" class="col-form-label">Duración: </label>
-            <input type="text" class="form-control" id="duracion" name="duracion">
-          </div>
-          <div class="form-group">
-            <label for="imagen" class="col-form-label">Imagen: </label>
-            <input type="text" class="form-control" id="imagen" name="imagen">
+            <label for="nombre_curso"><strong>Nombre del Curso</strong></label>
+            <input type="text" required class="form-control" name="nombre_curso" id="nombre_curso" placeholder="Ingrese nombre del curso...">
           </div>
 
-            <input type="submit" name="btn" value="guardar">
-            <input type="hidden" name="m" value="guardar">
-            
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            
+          <div class="form-group ">
+            <label for="descripcion"><strong>Descripción</strong></label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="duracion"><strong>Duración (Horas)</strong></label>
+            <input type="int" required class="form-control" name="duracion" id="duracion" placeholder="Ingrese la duración del curso">
+          </div>
+
+
+          <div class="form-group">
+            <label for="filechooser"><strong>Seleccione la imagen del curso</strong></label>
+            <input class="form-control mb-2 mr-sm-2" type="file" name="filechooser" id="filechooser">
+          </div>
+          <div class="form-group">
+            <input hidden type="text" name="imagen" id="imagen">
+          </div>
+
+          <div class="form-group">
+            <label for="filechooserVideo"><strong>Seleccione video del curso</strong></label>
+            <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserVideo" id="filechooserVideo">
+          </div>
+          <div class="form-group">
+            <input hidden type="text" name="video" id="video">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="submitForm()">Guardar</button>
           </div>
         </form>
       </div>
@@ -83,4 +139,128 @@
   </div>
 </div>
 
+<!-- Modal Detalles-->
+<div class="modal fade" id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="modalDetallesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDetallesLabel">Detalles del Curso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="get" id="formDetalles">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label for="imagenDetalle"><strong>Imagen del Curso</strong></label> <br><br>
+                  <img width="200px" height="200px" style="border: 1 solid ;" name="imagenDetalle" id="imagenDetalle" src="" alt="">
+                </div>
+
+              </div>
+              <div class="col-sm-7 ml-5">
+                <div class="form-group">
+                  <label for="nombre_cursoDetalle"><strong>Nombre del Curso</strong></label>
+                  <input type="text" disabled class="form-control" name="nombre_cursoDetalle" id="Ingrese nombre del curso...">
+                </div>
+
+                <div class="form-group ">
+                  <label for="descripcionDetalle"><strong>Descripción</strong></label>
+                  <textarea disabled class="form-control" id="descripcionDetalle" name="descripcionDetalle" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="duracionDetalle"><strong>Duración (Horas)</strong></label>
+                  <input type="int" disabled class="form-control" name="duracionDetalle" id="duracionDetalle">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </form>
+      </div>
+
+    </div>
+  </div>
 </div>
+
+<!-- Modal Editar-->
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditLabel">Editar Curso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" id="formEdit">
+          <div class="form-group ">
+            <input hidden type="number" class="form-control" name="idCursoEdit" id="idCursoEdit">
+          </div>
+
+          <div class="form-group">
+            <label for="nombre_cursoEdit"><strong>Nombre del Curso</strong></label>
+            <input type="text" required class="form-control" name="nombre_cursoEdit" id="nombre_cursoEdit" placeholder="Ingrese nombre del curso...">
+          </div>
+
+          <div class="form-group ">
+            <label for="descripcionEdit"><strong>Descripción</strong></label>
+            <textarea class="form-control" id="descripcionEdit" name="descripcionEdit" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="duracionEdit"><strong>Duración (Horas)</strong></label>
+            <input type="int" required class="form-control" name="duracionEdit" id="duracionEdit" placeholder="Ingrese el nombre de la Pelicula">
+          </div>
+
+          <div class="form-group">
+            <label for="filechooserEdit"><strong>Seleccione la imagen del curso</strong></label>
+            <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserEdit" id="filechooserEdit">
+          </div>
+          <div class="form-group">
+            <input hidden type="text" name="imagenEdit" id="imagenEdit">
+          </div>
+
+          <div class="form-group">
+            <label for="filechooserVideoEdit"><strong>Seleccione el video del curso</strong></label>
+            <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserVideoEdit" id="filechooserVideoEdit">
+          </div>
+          <div class="form-group">
+            <input hidden type="text" name="videoEdit" id="videoEdit">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="GuadarEdit()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../../assets/js/cursos.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#tablaCursos').DataTable({
+      "order": [
+        [0, "des"]
+      ],
+      "lengthMenu": [
+        [5, 10, 25, -1],
+        [5, 10, 25, "All"]
+      ]
+    });
+  });
+</script>

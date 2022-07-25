@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="get">
+        <form action="" method="post">
           <div class="form-group">
             <label for="nombre_curso" class="col-form-label">Nombre del Curso: </label>
             <input type="text" class="form-control" id="nombre_curso" name="nombre_curso">

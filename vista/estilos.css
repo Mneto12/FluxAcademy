@@ -1,0 +1,46 @@
+.dashboard{
+    text-align: left;
+    align-content: center;
+    display: flex;
+}
+
+.dashboard--hijo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard--hijo:nth-child(2){
+    background-color: #343a40;
+    color: #00ed95;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dashboard--hijo:nth-child(2)>button{
+
+    background-color: #00ed95;
+    color: #343a40;
+    border: none;
+    align-content: center;
+}
+
+.dashboard--hijo:nth-child(2)>button:hover{
+    background-color: #00c27b;
+    color: #343a40;
+    border: none;
+    
+}
+
+.color-gr{
+    background-color: #00ed95;
+    color: #343a40;
+    border: none;
+
+}
+
+.colorblack{
+    color:#343a40
+}

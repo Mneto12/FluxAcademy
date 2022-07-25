@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('./fonts/Poppins-Regular.ttf');
+    src: url('./fonts/Poppins-Light.ttf');
+    src: url('./fonts/Poppins-Bold.ttf');
+}
+
 :root {
     --error-color: #dc3545;
     --success-color: #28a745;
@@ -13,9 +20,15 @@
     /* outline: 2px solid limegreen; */
 }
 
+h1,h2,h3,h4 {
+    font-family: 'Oswald', sans-serif;
+}
+
+p, span , small , a {
+    font-family: 'Poppins', sans-serif;
+}
 
 body {
-    font-family: 'Oswald', sans-serif;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -31,13 +44,12 @@ body {
     width: 100vw;
     height: 100vh;
     right: 0;
-    opacity: 0.5;
     bottom: 0;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("./img/img_back.jpg");
+    background-image: url("./img/img_back.png");
 }
 
 .container {
@@ -170,7 +182,7 @@ p {
     cursor: pointer;
     transition: 0.25s ease-in-out all;
     display: flex;
-    align-items: center;
+    align-items: right;
 }
 
 .btn > span {
@@ -178,7 +190,8 @@ p {
 }
 
 .form-field--button {
-    grid-column: 2 / 3;
+    grid-column: 3 / 3;
+    border: 2px solid orange;
 }
 
 .btn:hover {
@@ -250,4 +263,23 @@ p {
 
 .oculto {
     display: none;
+}
+
+span {
+    color: #00ed95;
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('imagenes/error.jpg');
+}
+
+label{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.space {
+    color: white;
 }

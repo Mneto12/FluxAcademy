@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard</title>
@@ -30,8 +36,32 @@
   <link rel="stylesheet" href="../assets/css/dataTables.semanticui.min.css">
 
   <link rel="stylesheet" href="../assets/css/semantic.min.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <link rel="stylesheet" href="./estilos.css">
 
 </head>
+
+<?php
+
+session_start();
+
+if(isset($_SESSION['nombredelusuario']))
+{
+	$usuarioingresado = $_SESSION['nombredelusuario'];
+  $usuarioid = $_SESSION['idUsuario'];
+  $nombreyapellido = $_SESSION['nombreyapellido'];
+}
+else
+{
+	header('location: /vista/login/login.php');
+}
+
+if(isset($_POST['btncerrar']))
+{
+	session_destroy();
+	header('location: /vista/login/login.php');
+}
+?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 
@@ -64,37 +94,30 @@
       </script>
 
 
-
+    <form method="POST">
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link">Contactanos</a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link">Ayuda</a>
+          </li>
+        </ul>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Navbar Search -->
+          <li class="nav-item" style="padding-right: 20px ;">
+            <input class="fas bg-teal color-palette btn-sm" type="submit" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" value="Cerrar sesión" name="btncerrar" />
+          </li>
+        </ul>
+      </nav>
+    </form>
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link">Nosotros</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link">Contactanos</a>
-        </li>
-      </ul>
-
-      <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
@@ -102,7 +125,7 @@
       <!-- Brand Logo -->
       <a href="/" class="brand-link">
         <img src="../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Tu Curso On Line</span>
+        <span class="brand-text font-weight-light">Flux Academy</span>
       </a>
 
       <!-- Sidebar -->
@@ -113,7 +136,7 @@
             <img src="../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Alexander Pierce</a>
+            <a href="#" class="d-block"><?php echo ($nombreyapellido) ?></a>
           </div>
         </div>
 
@@ -123,7 +146,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="index.php" class="nav-link active">
+              <a href="index.php" class="nav-link active bg-teal color-palette">
                 <i class="nav-icon fas fa-solid fa-bahai"></i>
                 <p>
                   Inicio
@@ -146,7 +169,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a onclick="cargar_contenido('contenido_principal','curso/cursos_usuario.php')" class="nav-link">
+                  <a onclick="cargar_contenido('contenido_principal','curso/cursosusuario.php')" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Mis cursos</p>
                   </a>
@@ -161,7 +184,7 @@
                 </p>
               </a>
             </li>
-            <li class="nav-header">MANUALES</li>
+            <!--<li class="nav-header">MANUALES</li>
             <li class="nav-item">
               <a onclick="cargar_contenido('contenido_principal','usuario/manual.php')" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
@@ -169,7 +192,7 @@
                   Manual de Usuario
                 </p>
               </a>
-            </li>
+            </li>--> 
             <li class="nav-header">ADMINISTRADOR</li>
             <li class="nav-item">
               <a onclick="cargar_contenido('contenido_principal','admin/listar_usuarios.php')" class="nav-link">
@@ -180,7 +203,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','admin/index.php')" class="nav-link">
+              <a onclick="cargar_contenido('contenido_principal','admin/listar_cursos.php')" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Lista de Cursos
@@ -208,24 +231,31 @@
       <!-- Main content -->
       <section class="content">
 
-        <div class="row" id="contenido_principal">
-          <div class="col-md-12">
-            <h1>Inicio</h1>
+        <div class="dashboard" id="contenido_principal">
+          <div class="col-md-6 dashboard--hijo">
+            <img src="../assets/img/dashboard.png">
             <!-- /.card -->
           </div>
-
-
+        
+          <div class="col-md-6 dashboard--hijo">
+            <h1>¡Bienvenido, usuario!</h1>
+            <p>Gracias por ser parte de la familia Flux Academy</p>
+            <p>¡Empieza a creecer ahora mísmo!</p>
+            <button class="btn btn-primary btn-lg px-4 me-sm-3" onclick="cargar_contenido('contenido_principal','curso/cursos.php')"> Explorar cursos</button>
+            <!-- /.card -->
+          </div>
         </div>
+        
       </section>
 
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      <strong>Copyright &copy; 2022 Flux Academy.</strong>
       All rights reserved.
       <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
+        <b>Version</b> 1.0.2
       </div>
     </footer>
 
@@ -248,6 +278,15 @@
     }
     $.widget.bridge('uibutton', $.ui.button)
   </script>
+  <script>
+  function ModalRegistroCurso() {
+    $("#modal_curso").modal({
+      backdrop: 'static',
+      keyboard: false
+    })
+    $("#modal_curso").modal('show');
+  }
+</script>
   <!-- Bootstrap 4 -->
   <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- ChartJS -->

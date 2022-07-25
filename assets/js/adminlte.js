@@ -23,6 +23,7 @@
    * Constants
    * ====================================================
    */
+/* Proyecto funciones*/
 
   var NAME$e = 'CardRefresh';
   var DATA_KEY$e = 'lte.cardrefresh';

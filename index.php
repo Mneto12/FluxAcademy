@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../assets/plugins/summernote/summernote-bs4.min.css">
-  
+  <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -52,14 +52,14 @@
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
-        <li class="nav-item">
-          <a class="nav-link btn btn-block btn-success btn-sm" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-user"> Login</i>
+        <li class="nav-item" style="padding-right: 5px">
+          <a class="nav-link btn btn-block btn-primary btn-sm" href="/vista/login/login.php" role="button">
+            <i class="fas"> Login</i>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"> Registro</i>
+        <li class="nav-item"  style="padding-right: 5px">
+          <a class="nav-link btn btn-block btn-success btn-sm" data-widget="fullscreen" href="#" role="button">
+            <i class="fas"> Registro</i>
           </a>
         </li>
       </ul>
