@@ -93,7 +93,7 @@
                       <h2 class="lead"><b>Miguel Coronel</b></h2>
                       <p class="text-muted text-sm"><b>Información: </b> Estudiante de Ingeniería Informática. </p>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Universidad: Rafael Belloso Chacín</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Universidad: Rafael Belloso Chacín (URBE)</li>
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Teléfono de Contacto: +58-4141458083</li>
                       </ul>
                     </div>
