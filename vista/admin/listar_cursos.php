@@ -1,7 +1,7 @@
 <!-- Comienza la edicion de la pagina  -->
 <div class="card col-md-12">
   <div class="card-header bg-teal color-palette">
-    <h1>Listado de Usuarios</h1>
+    <h1>Listado de Cursos</h1>
   </div>
 
   <div class="card-body">

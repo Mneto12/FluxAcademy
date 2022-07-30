@@ -129,15 +129,6 @@
                 </p>
               </a>
             </li>
-            <li class="nav-header">VISUALIZADOR</li>
-            <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','curso/cursos.php')" class="nav-link">
-                <i class="nav-icon far fa-calendar-alt"></i>
-                <p>
-                  Cursos
-                </p>
-              </a>
-            </li>
             <!--<li class="nav-header">MANUALES</li>
             <li class="nav-item">
               <a onclick="cargar_contenido('contenido_principal','usuario/manual.php')" class="nav-link">
@@ -147,7 +138,7 @@
                 </p>
               </a>
             </li>--> 
-            <li class="nav-header">ADMINISTRADOR</li>
+            <li class="nav-header">LISTADOS</li>
             <li class="nav-item">
               <a onclick="cargar_contenido('contenido_principal','admin/listar_usuarios.php')" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
@@ -161,6 +152,14 @@
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Lista de Cursos
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a onclick="cargar_contenido('contenido_principal','admin/listar_matricula.php')" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  Listado de Inscripción
                 </p>
               </a>
             </li>
@@ -211,7 +210,6 @@
             <h1>¡Bienvenido Administrador!</h1>
             <p>Utiliza las herramientas correctamente y recuerda siempre es necesario:</p>
             <p>¡Mantener la integridad de los datos!</p>
-            <button class="btn btn-primary btn-lg px-4 me-sm-3" onclick="cargar_contenido('contenido_principal','curso/cursos.php')"> Explorar cursos</button>
             <!-- /.card -->
           </div>
         </div>
