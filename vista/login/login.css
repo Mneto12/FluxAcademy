@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 2px solid limegreen; */
 }
 
 h1,h2,h3,h4 {
@@ -71,18 +70,22 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
+.header--login > img:hover {
+    cursor: pointer;
+}
+
 .header--login > img {
     height: 80px;
     width: 80px;
 }
 
-.header--login > p {
+/* .header--login > p {
     color: white;
     text-transform: uppercase;
     font-size: 30x;
     font-weight: bold;
     margin-right: 10px;
-}
+} */
 
 a {
     color: white;
@@ -157,6 +160,7 @@ small {
 
 .small {
     margin: 5px 0;
+    color: black;
     text-align: center;
 }
 
@@ -196,7 +200,6 @@ p {
 
 .btn:hover {
     transition: 0.25s ease-in-out all;
-    /* box-shadow: 5px 4px 11px 1px rgba(0,0,0,0.51); */
     color: black;
     background-color: white;
 }
@@ -230,6 +233,20 @@ p {
     margin: 1.500rem 0;
     background-color: black;
     opacity: 0.2;
+}
+
+/* FORM FILECHOOSER */
+
+.form--imagen {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.form--imagen--success {
+    border: 2px solid var(--success-color);
 }
 
 /* media queries */
@@ -267,12 +284,6 @@ p {
 
 span {
     color: #00ed95;
-}
-
-.error {
-    color: #D8000C;
-    background-color: #FFBABA;
-    background-image: url('imagenes/error.jpg');
 }
 
 label{

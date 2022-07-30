@@ -5,9 +5,9 @@
     <title>Registro de usuario</title>
     <link rel="stylesheet" href="./login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./ValidacionesJs/login.js"></script>
     <script defer src="./ValidacionesJs/OnlyText.js"></script>
     <script defer src="./ValidacionesJs/OnlyNumbers.js"></script>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <!-- Iconos google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
@@ -135,19 +135,23 @@
                 </small>
             </div>
 
-            <div class="">
+            <div class="form--imagen">
                 <div class="leyenda">
                     <span class="material-icons-outlined">add_a_photo</span>
-                    <label class="space" for="filechooser">Seleccione la imagen del usuario</label>
+                    <label class="space" for="filechooser">Foto de perfil</label>
                 </div>
-                <input class="form-control mb-2 mr-sm-2" type="file" name="filechooser" id="filechooser">
-                <div class="form-group">
+                <input class="fileC form-control mb-2 mr-sm-2" type="file" name="filechooser" id="filechooser">
+                <input hidden type="text" name="imagen" id="imagen">
+                <small class="oculto small">
+                    
+                </small>
+                <!-- <div class="form-group">
                     <input hidden type="text" name="imagen" id="imagen">
-                </div>
+                </div> -->
             </div>
 
             <div class="form-field">
-                <button type="button" name="guardar" class="btn" onclick="submitForm()">Registrar</button>
+                <button type="button" name="guardar" class="btn" onclick="submitForm('true')">Registrar</button>
             </div>
             <div class="form-field">
                 <button type="button" name="guardar" class="btn" onclick="cambia_de_pagina()">Cancelar</button>
