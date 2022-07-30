@@ -313,13 +313,13 @@
                 });
                 uploadFile();
               // Upload Image
-              async function uploadFile() {
-      let formData = new FormData(); 
-      formData.append("file", filechooser.files[0]);
-      await fetch('../../modelo/usuarios/upload.php', {
-        method: "POST", 
-        body: formData
-      }); 
+                async function uploadFile() {
+                let formData = new FormData(); 
+                formData.append("file", filechooser.files[0]);
+                await fetch('../../modelo/usuarios/upload.php', {
+                    method: "POST", 
+                    body: formData
+                }); 
               }
             }
     }
