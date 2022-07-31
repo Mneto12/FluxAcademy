@@ -317,7 +317,7 @@
                     if (!jsonData.success == "1") {
                         alert("ERROR interno. Verificar con el administrador");
                     }
-                    
+
                   },
                 });
                 uploadFile();
