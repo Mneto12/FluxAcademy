@@ -116,7 +116,7 @@
                     <span class="material-icons-outlined">password</span>
                     <p class="space">Contraseña</p>
                 </div>
-                <input type="password" name="contrasena" id="contrasena" autocomplete="off" placeholder="Ingese una contraseña fuerte">
+                <input type="password" name="contrasena" id="contrasena" autocomplete="off" placeholder="Ingrese una contraseña fuerte">
                 <small class="oculto small">
 
                 </small>
