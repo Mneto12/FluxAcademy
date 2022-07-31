@@ -29,6 +29,7 @@
               <th>Nombre del Curso</th>
               <th>Nombre</th>
               <th>Apellido</th>
+              <th>Cédula</th>
               <th>Fecha de Inscripción</th>
             </tr>
           </thead>
@@ -49,6 +50,7 @@
         echo ('<td>' . $matricula['nombre_curso'] . '</td>');
         echo ('<td>' . $matricula['nombre'] . '</td>');
         echo ('<td>' . $matricula['apellido'] . '</td>');
+        echo ('<td>' . $matricula['cedula'] . '</td>');
         echo ('<td>' . $matricula['creado'] . '</td>');
         echo ('</tr>');
       }
