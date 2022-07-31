@@ -304,7 +304,7 @@
                     var jsonData = JSON.parse(response);
                     if (jsonData.success == "2") {
                       alert("La cédula, el correo o el nombre de usuario ya existen");
-                      return;
+                      location.reload();
                     }
                     
                     if (jsonData.success == "1") {
