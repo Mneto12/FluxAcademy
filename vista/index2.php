@@ -185,6 +185,12 @@
                     <p>Reporte de Cursos</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="/vista/reportesFPDF/reporteMatricula.php" target="_blank" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Reporte de Matrícula</p>
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
