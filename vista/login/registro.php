@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./ValidacionesJs/OnlyText.js"></script>
     <script defer src="./ValidacionesJs/OnlyNumbers.js"></script>
+    <script defer src="./ValidacionesJs/OnlyReloadPage.js"></script>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <!-- Iconos google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
@@ -115,7 +116,7 @@
                     <span class="material-icons-outlined">password</span>
                     <p class="space">Contraseña</p>
                 </div>
-                <input type="password" name="contrasena" id="contrasena" autocomplete="off" placeholder="Ingese una contraseña fuerte">
+                <input type="password" name="contrasena" id="contrasena" autocomplete="off" placeholder="Ingrese una contraseña fuerte">
                 <small class="oculto small">
 
                 </small>
