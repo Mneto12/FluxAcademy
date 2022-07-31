@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
-    <script defer src="./ValidacionesJs/login.js"></script>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <!-- Iconos google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 
@@ -17,8 +17,8 @@
     <div class="container container--login">
         <form id="signup" class="form form--login" method="POST">
 
-            <div class="header--login">
-                <img src="./img/icon.png" alt="">
+            <div class="header--login" onclick="location.href='../../index.php'">
+                <img src="./img/icon.png" alt="Logo de flux academy">
             </div>
 
             <div class="form-field">
@@ -101,13 +101,28 @@ if(isset($_POST['btningresar'])){
             
             header("location: ../index.php");
         }
-        else if($nr==0){
-            if($_POST['username']=='' or $_POST['password']==''){
-                echo ("<div class='error'>Error!: Complete todos los campos</div>");
-                return;
-            }
-            echo ("<div class='error'>Error!: Usuario o contraseña incorrecta</div>");
-            return;
+
+        if($_POST['username']=='' or $_POST['password']==''){
+            echo 
+            "<script src='./ValidacionesJs/login.js'></script>";
+        }
+
+        if(!$nr==1){
+            echo 
+            "<script>
+                const passwordEl = document.querySelector('#password');
+                const usernameEl = document.querySelector('#username');
+                const formField = passwordEl.parentElement;
+                const formField2 = usernameEl.parentElement;
+                
+                formField.classList.add('error');
+                formField2.classList.add('error');
+                
+                // Muestra el mensaje de error
+                const error = formField.querySelector('small');
+                error.classList.remove('oculto');
+                error.textContent = 'Error de usuario o contraseña';
+            </script>";
         }
     }
 
