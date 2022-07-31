@@ -24,7 +24,7 @@
     isset($_POST['contrasena']) ? $contrasena = htmlspecialchars($_POST['contrasena']) : $mensaje = true;
 
     $sqlconsulta = 'SELECT cedula, nombre_usuario, correo FROM usuario WHERE cedula='.$cedula.' OR nombre_usuario="'.$nombre_usuario.'" OR correo="'.$correo.'"';
-   
+
     $resultadoconsulta= $mysqli->query($sqlconsulta);
 
     if($resultadoconsulta->num_rows >= 1) {
@@ -38,7 +38,7 @@
 
 
     if($resultado==1) {
-          echo json_encode(array('success' => 1));
+        echo json_encode(array('success' => 1));
     } else {
         echo json_encode(array('success' => 0));
     }
