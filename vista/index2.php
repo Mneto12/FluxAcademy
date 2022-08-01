@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flux-Academy - Dashboard</title>
   <!-- Favicon-->
-  <link rel="icon" href="./vista/login/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/vista/login/img/favicon.ico" type="image/x-icon">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -81,10 +81,10 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link">Contactanos</a>
+            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contactanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="https://flipbookpdf.net/web/site/a2964cc43f1420f7ec34a9daba18b393fe716970202207.pdf.html" target="_blank" class="nav-link">Ayuda</a>
+            <a href="https://flipbookpdf.net/web/site/a2964cc43f1420f7ec34a9daba18b393fe716970202207.pdf.html" target="_blank" class="nav-link" style="cursor:pointer ;">Ayuda</a>
           </li>
         </ul>
         <!-- Right navbar links -->
@@ -140,7 +140,7 @@
             </li>--> 
             <li class="nav-header">LISTADOS</li>
             <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','admin/listar_usuarios.php')" class="nav-link">
+              <a onclick="cargar_contenido('contenido_principal','admin/listar_usuarios.php')" class="nav-link" style="cursor:pointer ;">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Lista de Usuarios
@@ -148,7 +148,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','admin/listar_cursos.php')" class="nav-link">
+              <a onclick="cargar_contenido('contenido_principal','admin/listar_cursos.php')" class="nav-link" style="cursor:pointer ;"> 
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Lista de Cursos
@@ -156,7 +156,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','admin/listar_matricula.php')" class="nav-link">
+              <a onclick="cargar_contenido('contenido_principal','admin/listar_matricula.php')" class="nav-link" style="cursor:pointer ;">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Listado de Inscripción
