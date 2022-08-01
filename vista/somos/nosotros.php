@@ -121,7 +121,7 @@
                             <img class="card-img-top" src="../assets/img/Ayuda-User_7.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Donde puedo ver más información sobre Flux Academy?</h1>
-                                        <p class="card-text">Desde nuestra landing page, tienes acceso a mucha infromación sobre Flux Academy, desde nuestras ventajas que ofrecemos a nuestros usuarios, hasta testimonios de nuestros estudiantes. Al final de nuestra página web, tenemos para ti un espacio de preguntas y respuestas pulsando cada una de las preguntas puedes acceder a sus respuestas.</p>
+                                        <p class="card-text">Desde nuestra landing page, tienes acceso a mucha información sobre Flux Academy, desde nuestras ventajas que ofrecemos a nuestros usuarios, hasta testimonios de nuestros estudiantes. Al final de nuestra página web, tenemos para ti un espacio de preguntas y respuestas pulsando cada una de las preguntas puedes acceder a sus respuestas.</p>
                                         <a href="#User6"> <p class="card-text"><small class="text-muted">Te puede interesar: Nuestra página web</small></p></a>
                                     </div>  
                         </div>
@@ -137,7 +137,7 @@
                             <img class="card-img-top" src="../assets/img/Ayuda-User_8.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo recuper mi contraseña?</h1>
-                                        <p class="card-text">En el Login, tenemos la opción de recuperar contraseña, desde ahí debes ingresar tu correo electrónico y seguir las instrucciones</p>
+                                        <p class="card-text">En el Login, tenemos la opción de recuperar contraseña, desde ahí debes ingresar tu correo electrónico y seguir las instrucciones.</p>
                                         <a href="#User6"> <p class="card-text"><small class="text-muted">Te puede interesar: Nuestra página web</small></p></a>
                                     </div>  
                         </div>
@@ -145,7 +145,7 @@
                             <img class="card-img-top" src="../assets/img/Ayuda-User_9.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo registro una cuenta nueva en Flux Academy?</h1>
-                                        <p class="card-text">En nuestra página web, tenemos un botón llamativo "Inscríbete Hoy", desde ahí podras acceder al menú de registro. Debes llenar el formulario con tu información personal, Asegúrate de que tu información personal es correcta ya que no tendrás forma de modficarla, para ello debes comunicarte con nosotros.</p>
+                                        <p class="card-text">En nuestra página web, tenemos un botón llamativo "Inscríbete Hoy", desde ahí podras acceder al menú de registro. Debes llenar el formulario con tu información personal. Asegúrate de que tu información personal es correcta ya que no tendrás forma de modificarla, para ello debes comunicarte con nosotros.</p>
                                         <a href="#User5"> <p class="card-text"><small class="text-muted">Te puede interesar: Contáctanos</small></p></a>
                                     </div>  
                         </div>
