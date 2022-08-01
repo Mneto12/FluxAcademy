@@ -24,8 +24,8 @@
                         <div class="card mb-4">
                             <div class="card-body">
                                 <p class="mb-0">
-                                    Bienvenido al E-Manuela de Usuario de Flux Academy. En este apartado tendrás acceso a nuestro material de documenación de la plataforma Flux Academy.
-                                    De esta forma podras acceser a nuestra Documentación detallada sobre nuestra plataforma que hemos hecho para ti. 
+                                    Bienvenido al E-Manual de Usuario de Flux Academy. En este apartado tendrás acceso a nuestro material de documentación de la plataforma Flux Academy.
+                                    De esta forma podras acceder a nuestra Documentación detallada sobre nuestra plataforma que hemos hecho para ti. 
                                 </p>
                             </div>
                         </div>

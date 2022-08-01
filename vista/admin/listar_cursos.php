@@ -149,7 +149,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
             <button type="button" class="btn btn-info" onclick="VerificarCurso('crear')">Verificar</button>
-            <button type="button" name="guardar" class="btn btn-primary btn--crear--curso" data-dismiss="modal" onclick="submitForm()" disabled>Guardar</button>
+            <button type="button" name="guardar" class="btn btn-primary btn--crear--curso" data-dismiss="modal" onclick="agregarCurso()" disabled>Guardar</button>
           </div>
         </form>
       </div>

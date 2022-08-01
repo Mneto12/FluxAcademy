@@ -81,7 +81,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contactanos</a>
+            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contáctanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="https://flipbookpdf.net/web/site/a2964cc43f1420f7ec34a9daba18b393fe716970202207.pdf.html" target="_blank" class="nav-link" style="cursor:pointer ;">Ayuda</a>

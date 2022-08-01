@@ -104,7 +104,7 @@ if(isset($_POST['btncerrar']))
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contactanos</a>
+            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contáctanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link" style="cursor:pointer ;">Ayuda</a>
@@ -259,7 +259,7 @@ if(isset($_POST['btncerrar']))
           <div class="col-md-6 dashboard--hijo">
             <h1>¡Bienvenido, <?php echo ($nombreyapellido) ?>!</h1>
             <p>Gracias por ser parte de la familia Flux Academy</p>
-            <p>¡Empieza a creecer ahora mísmo!</p>
+            <p>¡Empieza a crecer ahora mísmo!</p>
             <button class="btn btn-primary btn-lg px-4 me-sm-3" onclick="cargar_contenido('contenido_principal','curso/cursos.php')"> Explorar cursos</button>
             <!-- /.card -->
           </div>

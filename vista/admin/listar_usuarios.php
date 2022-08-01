@@ -187,8 +187,8 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-info" onclick="submitForm('modal')">Verificar</button>
-            <button type="button" name="guardar" class="btn btn-primary btn--crear--usuario" data-dismiss="modal" onclick="submitForm('validado')" disabled>Guardar</button>
+            <button type="button" class="btn btn-info" onclick="submitFormCrearEditar('modal')">Verificar</button>
+            <button type="button" name="guardar" class="btn btn-primary btn--crear--usuario" data-dismiss="modal" onclick="submitFormCrearEditar('validado')" disabled>Guardar</button>
           </div>
         </form>
       </div>

@@ -1,4 +1,4 @@
-function submitForm() {
+function agregarCurso() {
 
   var blobFile = document.getElementById("filechooser").files[0];
   $("#imagen").val(blobFile.name);
