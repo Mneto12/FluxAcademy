@@ -96,7 +96,7 @@
                         <!-- Testimonial 1-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-1.jpeg" alt="">
+                                <img src="./assets/img/testimonials-1.jpg" alt="">
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Maria Jose</p>
@@ -111,7 +111,7 @@
                         <!-- Testimonial 2-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-2.jpeg" alt="">
+                                <img src="./assets/img/testimonials-2.jpg" alt="">
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Carlos Rodriguez</p>
@@ -126,7 +126,7 @@
                         <!-- Testimonial 3-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-3.jpeg" alt="">
+                                <img src="./assets/img/testimonials-3.jpg" alt="">
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Andrea Sutherland</p>
