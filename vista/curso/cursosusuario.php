@@ -17,8 +17,8 @@
           <div class="card-body">
             <h2 class="titulocard"><?php echo $cursos['nombre_curso'] ?></h2>
             <p class="card-text"><?php echo $cursos['descripcion'] ?></p>
-            <div class="row">
-              <div class="col-sm-2">
+            <div class="row card-footer">
+              <div class="col-sm-3">
                 <button name="edit" class="btn btn-success"  data-toggle="modal" 
                                        data-target="#modalEdit" onclick="EditCurso(<?php echo $cursos['idCurso'] ?>)">
                                        <i class="far"> Ver</i></button>
