@@ -146,7 +146,7 @@ const Verificar = (validador) => {
             if (!isRequired(inputContrasena)) {
                 showError(inputContrasena, 'Este campo no puede estar vacio');
             } else if (!isPasswordSecure(password)) {
-                showError(inputContrasena, 'La contrasena debe tener al menos 8 caracteres e incluir al menos 1 minuscula, 1 mayuscula, 1 numero y 1 caracter especial (!@#$%^&*)');
+                showError(inputContrasena, 'La contraseña debe tener al menos 8 caracteres e incluir al menos 1 minuscula, 1 mayuscula, 1 numero y 1 caracter especial (!@#$%^&*)');
             } else {
                 showSuccess(inputContrasena);
                 valid = true;

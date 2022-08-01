@@ -162,7 +162,7 @@
           if (!isRequired(password)) {
               showError(passwordEl, 'Este campo no puede estar vacio');
           } else if (!isPasswordSecure(password)) {
-              showError(passwordEl, 'La contrasena debe tener al menos 8 caracteres e incluir al menos 1 minuscula, 1 mayuscula, 1 numero y 1 caracter especial (!@#$%^&*)');
+              showError(passwordEl, 'La contraseña debe tener al menos 8 caracteres e incluir al menos 1 minuscula, 1 mayuscula, 1 numero y 1 caracter especial (!@#$%^&*)');
           } else {
               showSuccess(passwordEl);
               valid = true;
