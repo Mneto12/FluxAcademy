@@ -35,8 +35,8 @@ foreach ($registros  as $registro) {
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <center><label for="imagenDetalle"><strong>Foto de Perfil</strong></label> <br>
-                                <img width="200px" height="200px" style="border: 1 solid ;" name="imagenDetalle" id="imagenDetalle" src="../../assets/img/<?php echo $registro['imagen'] ?>" alt="">
+                            <center><label for="imagenDetalle"><strong>Foto de Perfil</strong></label> <br> <br>
+                                <img class="img-circle" width="200px" height="200px" style="border: 1 solid ;" name="imagenDetalle" id="imagenDetalle" src="../../assets/img/<?php echo $registro['imagen'] ?>" alt="">
                             </center>
                         </div>
 

@@ -87,7 +87,7 @@ if(isset($_POST['btningresar'])){
     $nombre=$_POST['username'];
     $pass=$_POST['password'];
 
-    $query=mysqli_query($conn,"Select idUsuario, nombre_usuario, contrasena, nombre, apellido from usuario where nombre_usuario = '".$nombre."' and contrasena = '".$pass."'");
+    $query=mysqli_query($conn,"Select idUsuario, nombre_usuario, contrasena, nombre, imagen, apellido from usuario where nombre_usuario = '".$nombre."' and contrasena = '".$pass."'");
     $nr=mysqli_num_rows($query);
     $fila= mysqli_fetch_array($query);
 
@@ -97,6 +97,7 @@ if(isset($_POST['btningresar'])){
             $_SESSION['nombredelusuario']=$nombre;
             $_SESSION['idUsuario']=$fila['idUsuario'];
             $_SESSION['nombreyapellido']=$fila['nombre']. ' ' . $fila['apellido'];
+            $_SESSION['imagenProfile']=$fila['imagen'];
 
             
             header("location: ../index.php");

@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flux-Academy - Dashboard</title>
   <!-- Favicon-->
-  <link rel="icon" href="./vista/login/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/vista/login/img/favicon.ico" type="image/x-icon">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -51,6 +51,7 @@ if(isset($_SESSION['nombredelusuario']))
 	$usuarioingresado = $_SESSION['nombredelusuario'];
   $usuarioid = $_SESSION['idUsuario'];
   $nombreyapellido = $_SESSION['nombreyapellido'];
+  $imagenProfile = $_SESSION['imagenProfile'];
 }
 else
 {
@@ -103,10 +104,10 @@ if(isset($_POST['btncerrar']))
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link">Contactanos</a>
+            <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contactanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link">Ayuda</a>
+            <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link" style="cursor:pointer ;">Ayuda</a>
           </li>
         </ul>
         <!-- Right navbar links -->
@@ -134,7 +135,7 @@ if(isset($_POST['btncerrar']))
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="../assets/img/<?php echo ($imagenProfile)?>" class="img-circle elevation-2" alt="User Image" style="width:40px; height: 40px;">
           </div>
           <div class="info">
             <a href="#" class="d-block"><?php echo ($nombreyapellido) ?></a>
@@ -164,21 +165,22 @@ if(isset($_POST['btncerrar']))
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a onclick="cargar_contenido('contenido_principal','usuario/perfil_usuario.php')" class="nav-link">
+                  <a onclick="cargar_contenido('contenido_principal','usuario/perfil_usuario.php')" class="nav-link" style="cursor:pointer ;">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Mi Perfil</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a onclick="cargar_contenido('contenido_principal','curso/cursosusuario.php')" class="nav-link">
+                  <a onclick="cargar_contenido('contenido_principal','curso/cursosusuario.php')" class="nav-link" style="cursor:pointer ;">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Mis cursos</p>
                   </a>
                 </li>
               </ul>
             </li>
+            <li class="nav-header">CATÁLOGO</li>
             <li class="nav-item">
-              <a onclick="cargar_contenido('contenido_principal','curso/cursos.php')" class="nav-link">
+              <a onclick="cargar_contenido('contenido_principal','curso/cursos.php')" class="nav-link" style="cursor:pointer ;">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
                   Cursos
@@ -193,7 +195,7 @@ if(isset($_POST['btncerrar']))
                   Manual de Usuario
                 </p>
               </a>
-            </li>--> 
+            </li> 
             <li class="nav-header">ADMINISTRADOR</li>
             <li class="nav-item">
               <a onclick="cargar_contenido('contenido_principal','admin/listar_usuarios.php')" class="nav-link">
@@ -234,7 +236,7 @@ if(isset($_POST['btncerrar']))
                   </a>
                 </li>
               </ul>
-            </li>
+            </li>-->
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
