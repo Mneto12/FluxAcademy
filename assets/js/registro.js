@@ -14,7 +14,7 @@
   const form = document.querySelector('#formUsuario');
   const formImagen = document.querySelector('.form--imagen');
   
-  const submitForm = (validador) => { 
+  const submitFormCrearEditar = (validador) => { 
 
       const checkCedula = () => {
           
@@ -110,7 +110,7 @@
           if (!fecha.value) {
               showError(fecha, 'Seleccione una fecha');
           } else if (!calcularEdad(fecha)) {
-              showError(fecha, 'Debe de tener una edad minima de 15 años')
+              showError(fecha, 'Debe de tener una edad minima de 15 años o Introducir una fecha valida')
           } else {
               showSuccess(fecha);
               valid = true;
@@ -236,6 +236,11 @@
                   edad--;
               }
           }
+
+          if(anoNacimiento < 1930){
+            return false;
+          }
+
           if(edad < 15) {
             return false;
         }
@@ -285,8 +290,11 @@
             formField.classList.remove('error');
             formField.classList.add('success');
 
-            if(!input.querySelector('.fileC') && validador != 'modal'){
+            if(!input.querySelector('.fileC') && validador != 'modal' && imagen.value != ""){
                 formImagen.classList.add('form--imagen--success')
+                const error22 = document.getElementById('smallImagen');
+                error22.classList.add("oculto");
+                error22.textContent = '';
             }
             // hide the error message
             const error = formField.querySelector('small');

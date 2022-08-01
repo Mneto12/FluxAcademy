@@ -143,7 +143,7 @@
                 </div>
                 <input class="fileC form-control mb-2 mr-sm-2" type="file" name="filechooser" id="filechooser">
                 <input hidden type="text" name="imagen" id="imagen">
-                <small class="oculto small">
+                <small id="smallImagen" class="oculto small">
                     
                 </small>
                 <!-- <div class="form-group">
@@ -152,7 +152,7 @@
             </div>
 
             <div class="form-field">
-                <button type="button" name="guardar" class="btn" onclick="submitForm('true')">Registrar</button>
+                <button type="button" name="guardar" class="btn" onclick="submitFormCrearEditar('true')">Registrar</button>
             </div>
             <div class="form-field">
                 <button type="button" name="guardar" class="btn" onclick="cambia_de_pagina()">Cancelar</button>

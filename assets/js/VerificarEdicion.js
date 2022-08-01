@@ -200,9 +200,6 @@ const Verificar = (validador) => {
                     edad--;
                 }
             }
-            // console.log(anoNacimiento)
-            // console.log(mesNacimiento)
-            // console.log(diaNacimiento)
             if(edad < 15) {
                 return false;
             }
