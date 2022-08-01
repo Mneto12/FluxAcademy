@@ -18,12 +18,12 @@
           // Nombre y Apellido
           $pdf->SetFont('helvetica','B',35);
           $pdf->SetXY(23,77);
-          $pdf->Cell(250,20,ucfirst($consulta['nombre']) . " " . ucfirst($consulta['apellido']),0,0,'C',0);
+          $pdf->Cell(250,20,utf8_decode(ucfirst($consulta['nombre'])) . " " . utf8_decode(ucfirst($consulta['apellido'])),0,0,'C',0);
           $pdf->SetXY(23,120);
-          $pdf->Cell(250,30,ucfirst($consulta['nombre_curso']),0,0,'C',0);
+          $pdf->Cell(250,30,utf8_decode(ucfirst($consulta['nombre_curso'])),0,0,'C',0);
           $pdf->SetFont('helvetica','',15);
           $pdf->SetXY(23,130);
-          $pdf->Cell(250,30, 'Duracion: '.ucfirst($consulta['duracion']). ' Horas',0,0,'C',0);
+          $pdf->Cell(250,30, utf8_decode('Duración: ').ucfirst($consulta['duracion']). ' Horas',0,0,'C',0);
     $pdf->Output();
       include("cerrar_conexion.php");
     
