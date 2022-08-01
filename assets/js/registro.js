@@ -68,7 +68,7 @@
           if (!isRequired(apellido)) {
               showError(apellidoEl, 'Este campo no puede estar vacio');
           } else if (!isBetween(apellido.length, min, max)) {
-              showError(apellidoEl, `El Apelldio debe estar entre ${min} y ${max} caracteres.`)
+              showError(apellidoEl, `El Apellido debe estar entre ${min} y ${max} caracteres.`)
           } else {
               showSuccess(apellidoEl);
               valid = true;
@@ -77,7 +77,7 @@
       }
   
       const checkSexo = () => {
-  
+        
           let valid = false;
       
           if (sexoM.checked == false && sexoF.checked == false) {
@@ -89,6 +89,19 @@
           }
           return valid;
       }
+
+      const checkSexo2 = () => {
+        
+        let valid = false;
+    
+        if (sexoM.checked == false && sexoF.checked == false) {
+            showError(sexo, `Seleccione un genero`)
+        } else {
+            showSuccess(sexo);
+            valid = true;
+        }
+        return valid;
+    }
   
       const checkFecha = () => {
   
@@ -97,7 +110,7 @@
           if (!fecha.value) {
               showError(fecha, 'Seleccione una fecha');
           } else if (!calcularEdad(fecha)) {
-              showError(fecha, 'Debe introduccir una fecha valida')
+              showError(fecha, 'Debe de tener una edad minima de 15 años')
           } else {
               showSuccess(fecha);
               valid = true;
@@ -159,6 +172,7 @@
       };
       
       const checkConfirmPassword = () => {
+
           let valid = false;
           // check confirm password
           const confirmPassword = confirmPasswordEl.value.trim();
@@ -222,48 +236,63 @@
                   edad--;
               }
           }
-          console.log(anoNacimiento)
-          console.log(mesNacimiento)
-          console.log(diaNacimiento)
-          if(anoActual < anoNacimiento && mesActual < mesNacimiento && diaActual < diaNacimiento) {
+          if(edad < 15) {
             return false;
-          }else{
+        }
+        
+        if(edad >= 15){
             return edad;
-          }
+        }
       };
       
       const isRequired = value => value === '' ? false : true;
       const isBetween = (length, min, max) => length < min || length > max ? false : true;
       
       const showError = (input, message) => {
+
+          if(validador == 'modal' && input == sexo){
+            const errorSexo = document.querySelector('.errorSexo')
+            errorSexo.classList.remove("oculto");
+            errorSexo.textContent = message;
+          }
+
+          if(validador == 'modal' && input == confirmPasswordEl){
+            console.log("validacion")
+          }else{
+            const formField = input.parentElement;
       
-          const formField = input.parentElement;
-      
-          formField.classList.remove('success');
-          formField.classList.add('error');
-      
-          // Muestra el mensaje de error
-          const error = formField.querySelector('small');
-          error.classList.remove("oculto");
-          error.textContent = message;
+            formField.classList.remove('success');
+            formField.classList.add('error');
+        
+            // Muestra el mensaje de error
+            const error = formField.querySelector('small');
+            error.classList.remove("oculto");
+            error.textContent = message;
+          }
       };
       
       const showSuccess = (input) => {
-          // get the form-field element
-          const formField = input.parentElement;
-      
-          // remove the error class
-          formField.classList.remove('error');
-          formField.classList.add('success');
 
-        if(!input.querySelector('.fileC')){
-            formImagen.classList.add('form--imagen--success')
-        }
+        if(validador == 'modal' && input == sexo){
+            const errorSexo = document.querySelector('.errorSexo')
+            errorSexo.classList.add("oculto");
+            errorSexo.textContent = '';
+          }else{
+            // get the form-field element
+            const formField = input.parentElement;
       
-          // hide the error message
-          const error = formField.querySelector('small');
-          error.classList.add("oculto");
-          error.textContent = '';
+            // remove the error class
+            formField.classList.remove('error');
+            formField.classList.add('success');
+
+            if(!input.querySelector('.fileC') && validador != 'modal'){
+                formImagen.classList.add('form--imagen--success')
+            }
+            // hide the error message
+            const error = formField.querySelector('small');
+            error.classList.add("oculto");
+            error.textContent = '';
+          }
       }
 
     const checkData = () => {
@@ -324,7 +353,80 @@
             }
     }
 
-    if(validador){
-      checkData();
+    const checkDataModal = () => {
+        const btn = document.querySelector('.btn--crear--usuario');
+        let isUsernameValid = checkUsername(),
+              isCedulaValid = checkCedula(),
+              isNombreValid = checkNombre(),
+              isApellidoValid = checkApellido(),
+              isSexoValid = checkSexo2(),
+              isFechaValid = checkFecha(),
+              isEmailValid = checkEmail(),
+              isPasswordValid = checkPassword(),
+              isConfirmImagenValid = checkImagen();
+  
+        let isFormValid = isCedulaValid &&
+              isNombreValid &&
+              isApellidoValid &&
+              isSexoValid &&
+              isFechaValid &&
+              isUsernameValid &&
+              isEmailValid &&
+              isPasswordValid &&
+              isConfirmImagenValid;
+  
+              if (isFormValid) {
+                btn.removeAttribute('disabled');
+              }
+
+              if (!isFormValid) {
+                btn.setAttribute('disabled','');
+              }
+      }
+
+    if(validador == 'true'){
+        checkData();
+    }
+    if(validador == 'modal'){
+        checkDataModal();
+    }
+    if(validador == 'validado'){
+        // Send data 
+        var blobFile = document.getElementById("filechooser").files[0];
+        $("#imagen").val(blobFile.name);
+      
+          $.ajax({
+            type: "POST",
+            url: "../../modelo/usuarios/add.php",
+            data: $("#formUsuario").serialize(),
+            success: function (response) {
+              var jsonData = JSON.parse(response);
+              if (jsonData.success == "2") {
+                alert("La cédula, el correo o el nombre de usuario ya existen");
+                return;
+              }
+              
+              if (jsonData.success == "1") {
+              alert("Se realizo el registro correctamente");
+                document.getElementById("formUsuario").reset();
+                $("#modalForm").modal("hide");
+                $("#contenido_principal").load('admin/listar_usuarios.php');
+              }
+              
+              if (!jsonData.success == "1") {
+                  alert("ERROR interno. Verificar con el administrador");
+              }
+            },
+          });
+          uploadFile();
+        // Upload Image
+          async function uploadFile() {
+          let formData = new FormData(); 
+          formData.append("file", filechooser.files[0]);
+          await fetch('../../modelo/usuarios/upload.php', {
+              method: "POST", 
+              body: formData
+          }); 
+        }
     }
 }

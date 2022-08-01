@@ -28,10 +28,8 @@
         isset($_POST['correoEdit']) ? $correo = htmlspecialchars($_POST['correoEdit']) : $mensaje = true;
         isset($_POST['contrasenaEdit']) ? $contrasena = htmlspecialchars($_POST['contrasenaEdit']) : $mensaje = true;
         isset($_POST['imagenEdit']) ? $imagen = htmlspecialchars($_POST['imagenEdit']) : $mensaje = true;
-
-        $sql2 = "UPDATE usuario SET cedula='$cedula', nombre='$nombre', apellido='$apellido', genero='$genero', fecha_nacimiento=STR_TO_DATE('$fecha_nacimiento','%Y-%m-%d'), nombre_usuario='$nombre_usuario', correo='$correo', contrasena='$contrasena', imagen='$imagen' WHERE idUsuario =".$_POST['idUsuarioEdit'];
-
         
+        $sql2 = "UPDATE usuario SET cedula='$cedula', nombre='$nombre', apellido='$apellido', genero='$genero', fecha_nacimiento=STR_TO_DATE('$fecha_nacimiento','%Y-%m-%d'), nombre_usuario='$nombre_usuario', correo='$correo', contrasena='$contrasena', imagen='$imagen' WHERE idUsuario =".$_POST['idUsuarioEdit'];
 
         $resultadoEdit = $mysqli->query($sql2);
 

@@ -1,3 +1,5 @@
+<script defer src="./login/ValidacionesJs/OnlyNumbers.js"></script>
+<script defer src="./login/ValidacionesJs/OnlyText.js"></script>
 <!-- Comienza la edicion de la pagina  -->
 <div class="card col-md-12">
   <div class="card-header bg-teal color-palette">
@@ -103,52 +105,90 @@
       </div>
       <div class="modal-body">
         <form method="POST" id="formUsuario" enctype="multipart/form-data">
+
           <div class="form-group">
             <label for="cedula"><strong>Cédula</strong></label>
-            <input type="int" required class="form-control" name="cedula" id="cedula" placeholder="Ingrese cédula...">
+            <input type="int" required class="form-control" name="cedula" id="cedula" placeholder="Ingrese cédula..." maxlength="8" onkeypress="return onlyNumberKey(event)">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="nombre"><strong>Nombre</strong></label>
-            <input type="text" required class="form-control" name="nombre" id="nombre" placeholder="Ingrese nombre...">
+            <input type="text" required class="form-control" name="nombre" id="nombre" placeholder="Ingrese nombre..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="apellido"><strong>Apellido</strong></label>
-            <input type="text" required class="form-control" name="apellido" id="apellido" placeholder="Ingrese apellido...">
+            <input type="text" required class="form-control" name="apellido" id="apellido" placeholder="Ingrese apellido..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="genero"><strong>Genero</strong></label>
             <span>Masculino</span>
             <input class="sexo" type="radio" name="genero" id="hombre" value="Masculino">
             <span>Femenino</span>
             <input class="sexo" type="radio" name="genero" id="mujer" value="Femenino">
+            <small class="oculto errorSexo small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="fecha_nacimiento"><strong>Fecha de Nacimiento</strong></label>
             <input type="date" required class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Ingrese fecha de nacimiento...">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="nombre_usuario"><strong>Nombre de Usuario</strong></label>
             <input type="text" required class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder="Ingrese nombre usuario...">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="correo"><strong>Correo</strong></label>
             <input type="text" required class="form-control" name="correo" id="correo" placeholder="Ingrese correo electrónico...">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="contrasena"><strong>Contraseña</strong></label>
             <input type="text" required class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese contraseña...">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <label for="filechooser"><strong>Seleccione la imagen del usuario</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooser" id="filechooser">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <input hidden type="text" name="imagen" id="imagen">
           </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="submitForm()">Guardar</button>
+            <button type="button" class="btn btn-info" onclick="submitForm('modal')">Verificar</button>
+            <button type="button" name="guardar" class="btn btn-primary btn--crear--usuario" data-dismiss="modal" onclick="submitForm('validado')" disabled>Guardar</button>
           </div>
         </form>
       </div>
@@ -246,62 +286,115 @@
           </div>
 
           <div class="form-group">
-
             <div class="col-sm-3">
             </div>
             <label for="cedulaEdit"><strong>Cedula</strong></label>
-            <input type="int" required class="form-control" name="cedulaEdit" id="cedulaEdit" placeholder="Ingrese cédula...">
+            <input type="int" required class="form-control" name="cedulaEdit" id="cedulaEdit" placeholder="Ingrese cédula..." maxlength="8" onkeypress="return onlyNumberKey(event)">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="nombreEdit"><strong>Nombre</strong></label>
-            <input type="text" required class="form-control" name="nombreEdit" id="nombreEdit" placeholder="Ingrese nombre...">
+            <input type="text" required class="form-control" name="nombreEdit" id="nombreEdit" placeholder="Ingrese nombre..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="apellidoEdit"><strong>Apellido</strong></label>
-            <input type="text" required class="form-control" name="apellidoEdit" id="apellidoEdit" placeholder="Ingrese apellido...">
+            <input type="text" required class="form-control" name="apellidoEdit" id="apellidoEdit" placeholder="Ingrese apellido..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="generoEdit"><strong>Genero</strong></label>
             <span>Masculino</span>
-            <input class="sexo" type="radio" name="generoEdit" id="hombre" value="Masculino">
+            <input class="sexo" type="radio" name="generoEdit" id="hombreedit" value="Masculino">
             <span>Femenino</span>
-            <input class="sexo" type="radio" name="generoEdit" id="mujer" value="Femenino">
+            <input class="sexo" type="radio" name="generoEdit" id="mujeredit" value="Femenino">
+            <small id="generoEdit2" class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="fecha_nacimientoEdit"><strong>Fecha de Nacimiento</strong></label>
             <input type="date" required class="form-control" name="fecha_nacimientoEdit" id="fecha_nacimientoEdit" placeholder="Ingrese fecha de nacimiento...">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="nombre_usuarioEdit"><strong>Nombre de Usuario</strong></label>
             <input type="text" required class="form-control" name="nombre_usuarioEdit" id="nombre_usuarioEdit" placeholder="Ingrese nombre de usuario...">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="correoEdit"><strong>Correo</strong></label>
             <input type="text" required class="form-control" name="correoEdit" id="correoEdit" placeholder="Ingrese correo electrónico...">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="contrasenaEdit"><strong>Contraseña</strong></label>
             <input type="text" required class="form-control" name="contrasenaEdit" id="contrasenaEdit" placeholder="Ingrese contraseña...">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <label for="filechooserEdit"><strong>Seleccione la imagen del curso</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserEdit" id="filechooserEdit">
+            <small class="oculto small">
+              
+            </small>
           </div>
+
           <div class="form-group">
             <input hidden type="text" name="imagenEdit" id="imagenEdit">
           </div>
 
-          <div class="modal-footer">
+          <div class="modal-footer modal--footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="GuadarEdit()">Guardar</button>
+            <button type="button" class="btn btn-info" onclick="Verificar('true')">Verificar</button>
+            <button type="button" name="guardar" data-dismiss="modal" class="btn btn-primary btn--editar--usuario" onclick="GuadarEdit()" disabled>Guardar</button>
           </div>
+
         </form>
       </div>
     </div>
   </div>
 </div>
 
+<style>
+  small {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: #dc3545;
+    border-radius: 5px;
+    width: 50%;
+}
+.oculto {
+    display: none;
+}
+</style>
+
 <script src="../../assets/js/usuario.js"></script>
+<script src="../../assets/js/VerificarEdicion.js"></script>
+<script src="../../assets/js/registro.js"></script>
 <script>
   $(document).ready(function() {
     $('#tablaUsuario').DataTable({

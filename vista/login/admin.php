@@ -48,11 +48,12 @@
 
     function admin(){
 
-        let  clave = document.getElementById("password").value;
-        if(clave == 123456789){
+        let  clave = document.getElementById("password");
+
+        if(clave.value == 123456789){
             location.href = "/vista/index2.php"
         }else{
-            alert("Error!: Clave de administrador invalidad.")
+            alert("Clave de administrador invalida")
         }
     }
 

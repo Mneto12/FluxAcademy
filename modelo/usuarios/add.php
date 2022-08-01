@@ -23,6 +23,14 @@
     isset($_POST['imagen']) ? $imagen = htmlspecialchars($_POST['imagen']) : $mensaje = true;
     isset($_POST['contrasena']) ? $contrasena = htmlspecialchars($_POST['contrasena']) : $mensaje = true;
 
+    $sqlconsulta = 'SELECT cedula, nombre_usuario, correo FROM usuario WHERE cedula='.$cedula.' OR nombre_usuario="'.$nombre_usuario.'" OR correo="'.$correo.'"';
+
+    $resultadoconsulta= $mysqli->query($sqlconsulta);
+
+    if($resultadoconsulta->num_rows >= 1) {
+        echo json_encode(array('success' => 2));
+        return;
+    }
     
     $sql = "INSERT INTO usuario (cedula, nombre, apellido, genero, fecha_nacimiento, nombre_usuario, correo, contrasena, imagen) VALUES ('$cedula', '$nombre', '$apellido', '$genero', STR_TO_DATE('$fecha_nacimiento','%Y-%m-%d'), '$nombre_usuario', '$correo', '$contrasena', '$imagen')";
     
