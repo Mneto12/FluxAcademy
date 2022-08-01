@@ -182,7 +182,7 @@
               <div class="col-sm-7 ml-5">
                 <div class="form-group">
                   <label for="nombre_cursoDetalle"><strong>Nombre del Curso</strong></label>
-                  <input type="text" disabled class="form-control" name="nombre_cursoDetalle" id="Ingrese nombre del curso...">
+                  <input type="text" disabled class="form-control" id="nombre_cursoDetalle" name="nombre_cursoDetalle" id="Ingrese nombre del curso...">
                 </div>
 
                 <div class="form-group ">
