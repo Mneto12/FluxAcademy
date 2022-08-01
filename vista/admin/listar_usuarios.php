@@ -355,7 +355,7 @@
           </div>
 
           <div class="form-group">
-            <label for="filechooserEdit"><strong>Seleccione la imagen del curso</strong></label>
+            <label for="filechooserEdit"><strong>Seleccione la imagen de usuario</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserEdit" id="filechooserEdit">
             <small class="oculto small">
               

@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <html>
+
 <head>
   <title>Generar Certificado</title>
   <!-- Latest compiled and minified CSS -->
@@ -11,42 +12,52 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
 
 
-  <center><h1>GENERAR CERTIFICADO</h1></center>
-
-  
-<form method="POST" action="certificado.php" >
- <div class="form-group">
- <label for="ced">Cedula: <span class="required">*</span></label>
-<input type="text" id="ced" name="ced" pattern="[0-9]{8}" placeholder="Ingrese su cedula" required autofocus autocomplete='off' class="form-control"  />
- <br>
- 
-   <center>
-     <input type="submit" value="Enviar y Consultar" class="btn btn-success" name="btn1" >
-   </center>
-
- </form>
- </div>
+      <center>
+        <h1>GENERAR CERTIFICADO</h1>
+      </center>
 
 
-  
+      <form method="POST" action="certificado.php">
+        <div class="form-group">
+          <label for="ced">Cedula: <span class="required">*</span></label>
+          <input type="text" id="ced" name="ced" pattern="[0-9]{8}" placeholder="Ingrese su cedula" required autofocus autocomplete='off' class="form-control" />
+          <br>
+          <label for="ced">Curso: <span class="required">*</span></label>
+          <select name="" id="">
+          <option value="value1">Value 1</option>
+          <option value="value2" selected>Value 2</option>
+          <option value="value3">Value 3</option>
+          </select>
+          <br>
+          <center>
+            <input type="submit" value="Enviar y Consultar" class="btn btn-success" name="btn1">
+          </center>
+
+      </form>
+    </div>
+
+
+
 
 
 
   </div>
   <div class="col-md-4"></div>
-</div>
+  </div>
 
 
 
-  
-  
+
+
 </body>
+
 </html>

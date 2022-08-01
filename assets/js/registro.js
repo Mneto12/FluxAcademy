@@ -330,14 +330,22 @@
                   data: $("#formUsuario").serialize(),
                   success: function (response) {
                     var jsonData = JSON.parse(response);
+
+                    if (jsonData.success == "2") {
+                      alert("La cédula, el correo o el nombre de usuario ya existen");
+                      return;
+                    }
+                    
                     if (jsonData.success == "1") {
                     alert("Se realizo el registro correctamente");
                       document.getElementById("formUsuario").reset();
                       location.href = "./login.php"
                     }
+                    
                     if (!jsonData.success == "1") {
                         alert("ERROR interno. Verificar con el administrador");
                     }
+
                   },
                 });
                 uploadFile();

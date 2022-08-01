@@ -12,7 +12,7 @@
 
         }
     }
-    
+
     isset($_POST['cedula']) ? $cedula = htmlspecialchars($_POST['cedula']) : $mensaje=true;
     isset($_POST['nombre']) ? $nombre = htmlspecialchars($_POST['nombre']) : $mensaje = true;
     isset($_POST['apellido']) ? $apellido = htmlspecialchars($_POST['apellido']) : $mensaje = true;
@@ -31,14 +31,14 @@
         echo json_encode(array('success' => 2));
         return;
     }
-    
+
     $sql = "INSERT INTO usuario (cedula, nombre, apellido, genero, fecha_nacimiento, nombre_usuario, correo, contrasena, imagen) VALUES ('$cedula', '$nombre', '$apellido', '$genero', STR_TO_DATE('$fecha_nacimiento','%Y-%m-%d'), '$nombre_usuario', '$correo', '$contrasena', '$imagen')";
     
     $resultado = $mysqli->query($sql);
 
 
     if($resultado==1) {
-          echo json_encode(array('success' => 1));
+        echo json_encode(array('success' => 1));
     } else {
         echo json_encode(array('success' => 0));
     }
