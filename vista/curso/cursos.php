@@ -68,7 +68,7 @@ session_start();
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="GuadarEdit()">Guardar</button>
+            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="GuadarEdit()">Inscribirse</button>
           </div>
         </form>
       </div>

@@ -73,7 +73,7 @@
                             <img class="card-img-top" src="../assets/img/Ayuda-User_3.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo empezar a realizar Mis Cursos?</h1>
-                                        <p class="card-text">En este apartado, puedes detallar todos los cursos en los que has sido inscrito, desde este menú puedes acceder al contenido a través del botón "Ver". A continuación, de desplegará una pantalla donde puedes ver el contenido y videos. Para salir de este lugar puedes hacerlo pulsando la "X" ubicada en la esquina superior derecha o pulsando el botón "Cerrar" ubicado al final. Una vez termines el curso puedes generar el certificado que te ortogamos desde Flux Academy para recompensar tu desemmpeño.</p>
+                                        <p class="card-text">En este apartado, puedes detallar todos los cursos en los que has sido inscrito, desde este menú puedes acceder al contenido a través del botón "Ver". A continuación, se desplegará una pantalla donde puedes ver el contenido y videos. Para salir de este lugar puedes hacerlo pulsando la "X" ubicada en la esquina superior derecha o pulsando el botón "Cerrar" ubicado al final. Una vez termines el curso puedes generar el certificado que te ortogamos desde Flux Academy para recompensar tu desempeño.</p>
                                         <a href="#User4"> <p class="card-text"><small class="text-muted">Te puede interesar: Generar certificado</small></p></a>
                                     </div>  
                         </div>
