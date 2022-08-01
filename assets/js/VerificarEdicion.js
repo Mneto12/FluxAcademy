@@ -200,7 +200,11 @@ const Verificar = (validador) => {
                     edad--;
                 }
             }
-            if(edad < 15) {
+            if(anoNacimiento < 1930){
+                return false;
+              }
+    
+              if(edad < 15) {
                 return false;
             }
             
