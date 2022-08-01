@@ -1,44 +1,44 @@
-function submitForm() {
-  var blobFile = document.getElementById("filechooser").files[0];
+// function submitForm() {
+//   var blobFile = document.getElementById("filechooser").files[0];
   
-  $("#imagen").val(blobFile.name);
+//   $("#imagen").val(blobFile.name);
 
-    $.ajax({
-      type: "POST",
-      url: "../../modelo/usuarios/add.php",
-      data: $("#formUsuario").serialize(),
-      success: function (response) {
-        var jsonData = JSON.parse(response);
-        if (jsonData.success == "1") {
-         alert("Se realizo el registro correctamente");
-          $("#modalForm").modal("hide");
-          document.getElementById("formUsuario").reset();
-          $("#contenido_principal").load('admin/listar_usuarios.php');
-  //location.reload();
-        } else {
-          alert("Error debe completar todos los campos");
-        }
-      },
-    });
-    uploadFile();
-  }
-  
-  async function uploadFile() {
+//     $.ajax({
+//       type: "POST",
+//       url: "../../modelo/usuarios/add.php",
+//       data: $("#formUsuario").serialize(),
+//       success: function (response) {
+//         var jsonData = JSON.parse(response);
+//         if (jsonData.success == "1") {
+//           alert("Se realizo el registro correctamente");
+//           $("#modalForm").modal("hide");
+//           document.getElementById("formUsuario").reset();
+//           $("#contenido_principal").load('admin/listar_usuarios.php');
+//         } else {
+//           alert("Error debe completar todos los campos");
+//         }
+//       },
+//     });
+//     uploadFile();
+// }
+
+async function uploadFile() {
     let formData = new FormData(); 
     formData.append("file", filechooser.files[0]);
     await fetch('../../modelo/usuarios/upload.php', {
       method: "POST", 
       body: formData
     }); 
-  }
+}
 
-    function mostrarDetalles(id) {
+function mostrarDetalles(id) {
        $.ajax({
            type: "GET",
            url: "../../modelo/usuarios/detalles.php",
            data: {idUsuario : id},
            success: function (response) {
              var jsonData = JSON.parse(response);
+             console.log(jsonData)
              $("#cedulaDetalle").val(jsonData[0].cedula);
              $("#nombreDetalle").val(jsonData[0].nombre);
              $("#apellidoDetalle").val(jsonData[0].apellido);
@@ -48,48 +48,44 @@ function submitForm() {
              $("#correoDetalle").val(jsonData[0].correo);
              $("#contrasenaDetalle").val(jsonData[0].contrasena);
              $("#imagenDetalle").attr("src","../../assets/img/"+jsonData[0].imagen);
-
            }
          })         
          ;
-    }
+}
 
-
-    async function uploadFileEdit() {
+async function uploadFileEdit() {
       let formData = new FormData(); 
       formData.append("file", filechooserEdit.files[0]);
       await fetch('../../modelo/usuarios/upload.php', {
         method: "POST", 
         body: formData
       }); 
-    }
+}
     
-    
-    function GuadarEdit() {
+function GuadarEdit() {
       var blobFile = document.getElementById("filechooserEdit").files[0];
-
       $("#imagenEdit").val(blobFile.name);
             
-       $.ajax({
-         type: "POST",
-         url: "../../modelo/usuarios/edit.php",
-         data: $("#formEdit").serialize(),
-         success: function (response) {
-           var jsonData = JSON.parse(response);
-           if (jsonData.success == "1") {
-             alert("El registro fue actualizado");
-             $("#modalEdit").modal("hide");
-             document.getElementById("formEdit").reset();
-             $("#contenido_principal").load('admin/listar_usuarios.php');
-           } else {
-             alert("Error debe completar todos los campos");
-           }
-         },
-       });
-       uploadFileEdit();
-     }
+      $.ajax({
+        type: "POST",
+        url: "../../modelo/usuarios/edit.php",
+        data: $("#formEdit").serialize(),
+        success: function (response) {
+          var jsonData = JSON.parse(response);
+          if (jsonData.success == "1") {
+            alert("El registro fue actualizado");
+            $("#modalEdit").modal("hide");
+            document.getElementById("formEdit").reset();
+            $("#contenido_principal").load('admin/listar_usuarios.php');
+          } else {
+            alert("Error debe completar todos los campos");
+          }
+        },
+      });
+  uploadFileEdit();
+}
     
-    function EditUsuario(id) {
+function EditUsuario(id) {
       
         $.ajax({
             type: "GET",
@@ -112,10 +108,9 @@ function submitForm() {
             }
           })         
           ;
-    }
+}
     
-    
-    function borrarUsuario(id) {
+function borrarUsuario(id) {
        if (confirm('¿Esta seguro que desea borrar el registro?')) {
           $.ajax({
              type: "POST",
@@ -131,7 +126,4 @@ function submitForm() {
              },
            });
         }   
-    }
-    
-    
-    
+}
