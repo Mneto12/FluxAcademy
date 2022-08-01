@@ -1,3 +1,4 @@
+<script defer src="./login/ValidacionesJs/OnlyNumbers.js"></script>
 <!-- Comienza la edicion de la pagina  -->
 <div class="card col-md-12">
   <div class="card-header bg-teal color-palette">
@@ -97,25 +98,38 @@
       </div>
       <div class="modal-body">
         <form method="POST" id="formCursos" enctype="multipart/form-data">
+
           <div class="form-group">
             <label for="nombre_curso"><strong>Nombre del Curso</strong></label>
             <input type="text" required class="form-control" name="nombre_curso" id="nombre_curso" placeholder="Ingrese nombre del curso...">
+            <small class="oculto small">
+
+            </small>
           </div>
 
           <div class="form-group ">
             <label for="descripcion"><strong>Descripción</strong></label>
             <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+            <small class="oculto small">
+
+            </small>
           </div>
 
           <div class="form-group">
             <label for="duracion"><strong>Duración (Horas)</strong></label>
-            <input type="int" required class="form-control" name="duracion" id="duracion" placeholder="Ingrese la duración del curso">
+            <input type="int" required class="form-control" name="duracion" id="duracion" placeholder="Ingrese la duración del curso"  maxlength="3" onkeypress="return onlyNumberKey(event)">
+            <small class="oculto small">
+
+            </small>
           </div>
 
 
           <div class="form-group">
             <label for="filechooser"><strong>Seleccione la imagen del curso</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooser" id="filechooser">
+            <small class="oculto small">
+
+            </small>
           </div>
           <div class="form-group">
             <input hidden type="text" name="imagen" id="imagen">
@@ -124,6 +138,9 @@
           <div class="form-group">
             <label for="filechooserVideo"><strong>Seleccione video del curso</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserVideo" id="filechooserVideo">
+            <small class="oculto small">
+
+            </small>
           </div>
           <div class="form-group">
             <input hidden type="text" name="video" id="video">
@@ -131,7 +148,8 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="submitForm()">Guardar</button>
+            <button type="button" class="btn btn-info" onclick="VerificarCurso('crear')">Verificar</button>
+            <button type="button" name="guardar" class="btn btn-primary btn--crear--curso" data-dismiss="modal" onclick="submitForm()" disabled>Guardar</button>
           </div>
         </form>
       </div>
@@ -212,21 +230,33 @@
           <div class="form-group">
             <label for="nombre_cursoEdit"><strong>Nombre del Curso</strong></label>
             <input type="text" required class="form-control" name="nombre_cursoEdit" id="nombre_cursoEdit" placeholder="Ingrese nombre del curso...">
+            <small class="oculto small">
+
+            </small>
           </div>
 
           <div class="form-group ">
             <label for="descripcionEdit"><strong>Descripción</strong></label>
             <textarea class="form-control" id="descripcionEdit" name="descripcionEdit" rows="3"></textarea>
+            <small class="oculto small">
+
+            </small>
           </div>
 
           <div class="form-group">
             <label for="duracionEdit"><strong>Duración (Horas)</strong></label>
-            <input type="int" required class="form-control" name="duracionEdit" id="duracionEdit" placeholder="Ingrese el nombre de la Pelicula">
+            <input type="int" required class="form-control" name="duracionEdit" id="duracionEdit" placeholder="Ingrese la duración del curso" maxlength="3" onkeypress="return onlyNumberKey(event)">
+            <small class="oculto small">
+
+            </small>
           </div>
 
           <div class="form-group">
             <label for="filechooserEdit"><strong>Seleccione la imagen del curso</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserEdit" id="filechooserEdit">
+            <small class="oculto small">
+
+            </small>
           </div>
           <div class="form-group">
             <input hidden type="text" name="imagenEdit" id="imagenEdit">
@@ -235,13 +265,19 @@
           <div class="form-group">
             <label for="filechooserVideoEdit"><strong>Seleccione el video del curso</strong></label>
             <input class="form-control mb-2 mr-sm-2" type="file" name="filechooserVideoEdit" id="filechooserVideoEdit">
+            <small class="oculto small">
+
+            </small>
           </div>
+
           <div class="form-group">
             <input hidden type="text" name="videoEdit" id="videoEdit">
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" name="guardar" class="btn btn-primary" data-dismiss="modal" onclick="GuadarEdit()">Guardar</button>
+            <button type="button" class="btn btn-info" onclick="VerificarEditCurso()">Verificar</button>
+            <button type="button" name="guardar" class="btn btn-primary btn--editar--curso" data-dismiss="modal" onclick="GuadarEdit()" disabled>Guardar</button>
           </div>
         </form>
       </div>
@@ -249,8 +285,23 @@
   </div>
 </div>
 
+<style>
+  small {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: #dc3545;
+    border-radius: 5px;
+    width: 50%;
+}
+.oculto {
+    display: none;
+}
+</style>
 
 <script src="../../assets/js/cursos.js"></script>
+<script src="../../assets/js/verificarCreacionCurso.js"></script>
+<script src="../../assets/js/verificarEdicionCursos.js"></script>
 <script>
   $(document).ready(function() {
     $('#tablaCursos').DataTable({
