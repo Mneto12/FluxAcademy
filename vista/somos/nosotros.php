@@ -6,8 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Static Navigation - SB Admin</title>
-        <link href="css/styles.css" rel="stylesheet" />
+        <title>Ayuda al usuario - Flux Academy</title>
+        <!-- Favicon-->
+  <link rel="icon" href="/vista/login/img/favicon.ico" type="image/x-icon">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../../assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../../assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../../assets/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../assets/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../../assets/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../../assets/plugins/summernote/summernote-bs4.min.css">
+
+  <link rel="stylesheet" href="../../assets/css/dataTables.semanticui.min.css">
+
+  <link rel="stylesheet" href="../../assets/css/semantic.min.css">
+  <link rel="stylesheet" href=".../../assets/css/custom.css">
+  <link rel="stylesheet" href="../../vista/estilos.css">
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -46,7 +73,7 @@
                         </div>
                         <br>
                         <div id="User" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo funciona el Dashboard?</h1>
                                         <p class="card-text">Este espacio es el centro de toda nuestra plataforma, en él puedes acceder a diferentes secciones. LLamativamente tienes presente la opción de "Explorar cursos" en esta, podrás acceder a cátalogo de cursos. De esta manera, la intención del Dashboard es ser la bienvenida para ti a nuestra plataforma Flux Academy y desde la cual podrás acceder a todas las opciones que tenemos para ti.</p>
@@ -54,7 +81,7 @@
                                     </div>  
                         </div>
                         <div id="User1" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_1.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo modificar Mi Perfil?</h1>
                                         <p class="card-text">En este apartado tienes acceso a tu perfil, puedes observar la infomación detallada de tu información personal (Esta infomación no será compartida de forma pública). Si existe un error en tus datos personales, puedes comunicarte con nosotros a través de nuestras redes de contacto en la sección de "Contáctanos" de esta manera validaremso tu información personal con algún documento de identificación que nos suministres.</p>
@@ -62,7 +89,7 @@
                                     </div>  
                         </div>
                         <div id="User2" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_2.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_2.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Qué hay en mis cursos?</h1>
                                         <p class="card-text">Una vez te hayas inscrito en un cursos disponible del Cátalogo de Flux Academy. Tendrás disponible el curso en esta sección, desde aquí puedes acceder a su contenido y realizar las actividades necesarias. Cada curso cuenta con una durabilidad en horas.</p>
@@ -70,7 +97,7 @@
                                     </div>  
                         </div>
                         <div id="User3" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_3.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_3.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo empezar a realizar Mis Cursos?</h1>
                                         <p class="card-text">En este apartado, puedes detallar todos los cursos en los que has sido inscrito, desde este menú puedes acceder al contenido a través del botón "Ver". A continuación, se desplegará una pantalla donde puedes ver el contenido y videos. Para salir de este lugar puedes hacerlo pulsando la "X" ubicada en la esquina superior derecha o pulsando el botón "Cerrar" ubicado al final. Una vez termines el curso puedes generar el certificado que te ortogamos desde Flux Academy para recompensar tu desempeño.</p>
@@ -78,7 +105,7 @@
                                     </div>  
                         </div>
                         <div id="User11" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_4.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_4.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo descargar mi certifiacado?</h1>
                                         <p class="card-text">Una vez culmines tu curso, puedes generar tu certifiacdo de aprocación, este contendrá tu infomación personal. Para más información contáctanos.</p>
@@ -86,7 +113,7 @@
                                     </div>  
                         </div>
                         <div id="User4" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_4.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_4.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Dónde veo más Cursos?</h1>
                                         <p class="card-text">En este apartado llamado "Lista de Cursos" tienes acceso a una gran cantidad de contenido educativo que tenemos para ti, cada curso tiene una determinada hora de duración, videos e imagenes que ayudan en tu aprendizaje.</p>
@@ -94,7 +121,7 @@
                                     </div>  
                         </div>
                         <div id="User12" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_4.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_4.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo inscribirme en los cursos de Flux Academy?</h1>
                                         <p class="card-text">Desde "Lista de Cursos" tienes acceso a una gran cantidad de contenido educativo que tenemos para ti, pulsando el botón "Inscribir" puedes ser parte de este curso y tener acceso a su contenido una vez confirmes la inscripción, el curso estrá disponible en el menú de "Mis Cursos".</p>
@@ -102,7 +129,7 @@
                                     </div>  
                         </div>
                         <div id="User5" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_5.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_5.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo contáctarme con Flux Academy?</h1>
                                         <p class="card-text">En la barra de navegación horizontal puedes acceder a "Contáctanos" en este espacio puedes ver nuestras redes de contactos. En Flux Academy tenemos soporte 24/7 para nuestros estudiantes de Flux Academy.</p>
@@ -110,7 +137,7 @@
                                     </div>  
                         </div>
                         <div id="User6" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_6.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_6.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo funciona la Página Web de Flux Academy?</h1>
                                         <p class="card-text">En este espacio que hemos diseñado para ti, puedes acceder a las pantallas de registro, iniciar sesión, conocer las ventajas de Flux Academy y conocer el apartado de preguntas y respuestas.</p>
@@ -118,7 +145,7 @@
                                     </div>  
                         </div>
                         <div id="User7" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_7.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_7.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Donde puedo ver más información sobre Flux Academy?</h1>
                                         <p class="card-text">Desde nuestra landing page, tienes acceso a mucha información sobre Flux Academy, desde nuestras ventajas que ofrecemos a nuestros usuarios, hasta testimonios de nuestros estudiantes. Al final de nuestra página web, tenemos para ti un espacio de preguntas y respuestas pulsando cada una de las preguntas puedes acceder a sus respuestas.</p>
@@ -126,7 +153,7 @@
                                     </div>  
                         </div>
                         <div id="User8" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_8.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_8.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo inicio sesión en mi cuenta de Flux Academy?</h1>
                                         <p class="card-text">Desde nuestra landing page, puedes acceder al menú de iniciar sesión pulsando "Acceso a Estudiantes" ubicado en la parte superior derecha de nuestra página web.</p>
@@ -134,7 +161,7 @@
                                     </div>  
                         </div>
                         <div id="User9" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_8.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_8.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo puedo recuper mi contraseña?</h1>
                                         <p class="card-text">En el Login, tenemos la opción de recuperar contraseña, desde ahí debes ingresar tu correo electrónico y seguir las instrucciones.</p>
@@ -142,7 +169,7 @@
                                     </div>  
                         </div>
                         <div id="User10" class="card mb-3">
-                            <img class="card-img-top" src="../assets/img/Ayuda-User_9.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../../assets/img/Ayuda-User_9.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h1 class="card-title">¿Cómo registro una cuenta nueva en Flux Academy?</h1>
                                         <p class="card-text">En nuestra página web, tenemos un botón llamativo "Inscríbete Hoy", desde ahí podras acceder al menú de registro. Debes llenar el formulario con tu información personal. Asegúrate de que tu información personal es correcta ya que no tendrás forma de modificarla, para ello debes comunicarte con nosotros.</p>
@@ -156,7 +183,7 @@
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div>
-                                <a onclick="cargar_contenido('contenido_principal','somos/userpdf.php')" class="nav-link">E-manual de usuario</a>
+                                <a href='/vista/somos/userpdf.php' class="nav-link">E-manual de usuario</a>
                                 &middot;
                                 <a href="#">Flux Academy</a>
                             </div>

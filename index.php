@@ -30,6 +30,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inscríbete hoy</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="/vista/login/login.php">Acceso a Flux Academy</a></li>
+                        <li class="nav-item d-none d-sm-inline-block"><a href='/vista/somos/nosotros.php' class="nav-link" style="cursor:pointer ;">Ayuda</a></li>
                     </ul>
                 </div>
             </div>
@@ -96,10 +97,10 @@
                         <!-- Testimonial 1-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-1.jpeg" alt="">
+                                <img src="./assets/img/testimonials-1.jpg" alt="">
                             </div>
                             <div class="body--card">
-                                <p class="subtitle">Maria Jose</p>
+                                <p class="subtitle">Esteban Castellanos</p>
                                 <p>"La plataforma es muy entretenida y con contenido de alto valor. Los videos y sus contenido es excelente, es chevere tener esa interacción, eso es algo muy positivo"</p>
                                 <p class="subtitle">Maracaibo | Venezuela</p>
                             </div>

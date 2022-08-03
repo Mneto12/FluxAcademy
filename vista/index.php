@@ -138,7 +138,7 @@ if(isset($_POST['btncerrar']))
             <img src="../assets/img/<?php echo ($imagenProfile)?>" class="img-circle elevation-2" alt="User Image" style="width:40px; height: 40px;">
           </div>
           <div class="info">
-            <a href="#" class="d-block"><?php echo ($nombreyapellido) ?></a>
+            <a onclick="cargar_contenido('contenido_principal','usuario/perfil_usuario.php')" href="#" class="d-block"><?php echo ($nombreyapellido) ?></a>
           </div>
         </div>
 
