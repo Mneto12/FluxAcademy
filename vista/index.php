@@ -107,8 +107,7 @@ if(isset($_POST['btncerrar']))
             <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contáctanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a onclick="cargar_contenido('contenido_principal','somos/nosotros.php')" class="nav-link" style="cursor:pointer ;">Ayuda</a>
-          </li>
+            <a href="https://www.flipbookpdf.net/web/site/b6d6743756611bbffb26176894d331b3ebc43cf6202208.pdf.html" target="_blank" class="nav-link" style="cursor:pointer ;">Ayuda</a>          </li>
         </ul>
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">

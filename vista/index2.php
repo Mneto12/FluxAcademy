@@ -84,7 +84,7 @@
             <a onclick="cargar_contenido('contenido_principal','somos/contacto.php')" class="nav-link" style="cursor:pointer ;">Contáctanos</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="https://flipbookpdf.net/web/site/a2964cc43f1420f7ec34a9daba18b393fe716970202207.pdf.html" target="_blank" class="nav-link" style="cursor:pointer ;">Ayuda</a>
+            <a href="https://flipbookpdf.net/web/site/61c10e6715a2a261bb1bf632ad70decf300216ab202208.pdf.html" target="_blank" class="nav-link" style="cursor:pointer ;">Ayuda</a>
           </li>
         </ul>
         <!-- Right navbar links -->
