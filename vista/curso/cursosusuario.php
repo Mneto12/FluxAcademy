@@ -17,20 +17,20 @@
           <div class="card-body">
             <h2 class="titulocard"><?php echo $cursos['nombre_curso'] ?></h2>
             <p class="card-text"><?php echo $cursos['descripcion'] ?></p>
-            <div class="row card-footer">
-              <div class="col-sm-3">
-                <button name="edit" class="btn btn-success"  data-toggle="modal" 
-                                       data-target="#modalEdit" onclick="EditCurso(<?php echo $cursos['idCurso'] ?>)">
-                                       <i class="far"> Ver</i></button>
-              </div>
-              <div class="col-sm-6">
-                <form method="POST" action="/vista/CERTIFICADOS/certificado.php">
-                  <input hidden type="text" name="idUsuario" value="<?php echo $_SESSION['idUsuario'] ?>">
-                  <input hidden type="text" name="idCurso" value="<?php echo $cursos['idCurso'] ?>">
-                  <input hidden type="text" name="nombreCurso" value="<?php echo $cursos['nombre_curso'] ?>">
-                  <input type="submit" value="Generar certificado" class="btn btn-info" name="btn1">
-                </form>
-              </div>
+          </div>
+          <div class="row card-footer">
+            <div class="col-sm-3">
+              <button name="edit" class="btn btn-success"  data-toggle="modal" 
+                                     data-target="#modalEdit" onclick="EditCurso(<?php echo $cursos['idCurso'] ?>)">
+                                     <i class="far"> Ver</i></button>
+            </div>
+            <div class="col-sm-6">
+              <form method="POST" action="/vista/CERTIFICADOS/certificado.php">
+                <input hidden type="text" name="idUsuario" value="<?php echo $_SESSION['idUsuario'] ?>">
+                <input hidden type="text" name="idCurso" value="<?php echo $cursos['idCurso'] ?>">
+                <input hidden type="text" name="nombreCurso" value="<?php echo $cursos['nombre_curso'] ?>">
+                <input type="submit" value="Generar certificado" class="btn btn-info" name="btn1">
+              </form>
             </div>
           </div>
         </div>
