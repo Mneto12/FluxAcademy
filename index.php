@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inscríbete hoy</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="/vista/login/login.php">Acceso a Estudiantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/vista/login/login.php">Acceso a Flux Academy</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,9 +42,9 @@
                         <div class="my-5">
                             <h1 class="display-5 fw-bolder text-white mb-2">Aprende de expertos,</h1>
                             <h1 class="display-5 fw-bolder text-white mb-2">conviértete en uno</h1>
-                            <p class="text--hero lead text-white mb-4">Certifícate con contenido de alta calidad académica, clases en vivo y la mejor experiencia de aprendizaje online diseñada para que cumplas tus objetivos profesionales.</p>
+                            <p class="text--hero lead text-white mb-4">Certifícate con contenido de alta calidad académica, contenido visual y la mejor experiencia de aprendizaje online diseñada para que cumplas tus objetivos profesionales.</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-start">
-                                <a class="btn btn--inscribete btn-primary btn-lg px-4 me-sm-3" href="/vista/login/registro.php">Inscríbete hoy</a>
+                                <a class="btn btn--inscribete btn-primary btn-lg px-4 me-sm-3" href="/vista/login/registro.php">Regístrate hoy</a>
                                 <a class="btn btn-outline-light btn-lg px-4" href="#features">Descubre Flux Academy</a>
                             </div>
                         </div>
@@ -63,13 +63,13 @@
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0 d-flex flex-column align-items-center">
                         <div class="icons--features feature text-white rounded-3 mb-3"><i class="icons--features bi bi-award"></i></div>
-                        <h2 class="h4 fw-bolder">Clases en vivo ilimitadas</h2>
-                        <p class="text-center">Adquiere nuevas habilidades todos los días, en sesiones interactivas con profesionales destacados de diferentes industrias.</p>
+                        <h2 class="h4 fw-bolder">Clases ilimitadas</h2>
+                        <p class="text-center">Adquiere nuevas habilidades todos los días, desde los cursos que inscribas y accede a su contenido destacados de diferentes industrias cuantas veces quieras.</p>
                     </div>
                     <div class="col-lg-4 d-flex flex-column align-items-center">
                         <div class="icons--features feature text-white rounded-3 mb-3"><i class="icons--features bi bi-telephone"></i></div>
                         <h2 class="h4 fw-bolder">De la mano de expertos</h2>
-                        <p class="text-center">Consolida tus conocimientos acompañado de expertos disponibles para ti en clases, vía chat, foros y más, resuelve tus dudas y recibe asesoría.</p>
+                        <p class="text-center">Consolida tus conocimientos a tráves de nuestro contenido diseñado por expertos.</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Maria Jose</p>
-                                <p>"La plataforma es muy entretenida y con contenido de alto valor. Los videos y las pruebas son muy llamativas, es chevere tener esa interacción, eso es algo muy positivo"</p>
+                                <p>"La plataforma es muy entretenida y con contenido de alto valor. Los videos y sus contenido es excelente, es chevere tener esa interacción, eso es algo muy positivo"</p>
                                 <p class="subtitle">Maracaibo | Venezuela</p>
                             </div>
                             <div class="footer--card">
@@ -115,7 +115,7 @@
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Carlos Rodriguez</p>
-                                <p>"Procuro terminar 6 cursos porque son de un contenido muy rico, actualizado y bien desarrollado con facilidad para seguir con el apoyo de los videos y clases en linea"</p>
+                                <p>"Procuro terminar 6 cursos porque son de un contenido muy rico, actualizado y bien desarrollado con facilidad para seguir con el apoyo de los videos de la plataforma"</p>
                                 <p class="subtitle">Maracaibo | Venezuela</p>
                             </div>
                             <div class="footer--card">
@@ -158,7 +158,8 @@
                         <label for="tab-one">¿Qué es Flux Academy?</label>
                         <div class="tab-content">
                             <p>Flux Academy es una plataforma de cursos que nació de forma presencial e hibrida. Nuestro método cuenta con 3 pilares fundamentales que te ayudarán a lograr la fluidez académica que necesitas:</p>
-                            <p>Clases en vivo Ilimitadas 24/7: En estas sesiones de grupos pequeños de alumnos, mejorarás tus habilidades mientras interactúas con el profesor y otros estudiantes. Lecciones: Combinamos la teoría y la práctica con ejercicios interactivos que harán tu proceso de aprendizaje más eficiente y entretenido.</p>
+                            <p>Clases Ilimitadas: En estas sesiones mejorarás tus habilidades mientras ves los videos y su contenido a tráves de nuestra plataforma</p>
+                            <p>Lecciones: Combinamos la teoría y la práctica con ejercicios interactivos que harán tu proceso de aprendizaje más eficiente y entretenido.</p>
                             <p>Prácticas: Disfruta de herramientas  en nuestra plataforma. Podrás practicar con ellas todas las veces que quieras para mejorar distintas áreas de tu aprendizaje.</p>
                         </div>
                     </div>
@@ -183,7 +184,7 @@
                         <input id="tab-four" type="checkbox" name="tabs">
                         <label for="tab-four">¿Qué necesito para utilizar la plataforma Flux Academy?</label>
                         <div class="tab-content">
-                          <p>Solo necesitas una computadora, o tablet, y conexión a Internet para ingresar a nuestra plataforma También necesitas tener la aplicación Zoom instalada en tus dispositivos, unos audífonos y un micrófono en caso de nuestros cursos 100% on line.</p>
+                          <p>Solo necesitas una computadora, o tablet, y conexión a Internet para ingresar a nuestra plataforma, unos audífonos te ayudarán a ver el material audiovisual de forma mas enfocada.</p>
                         </div>
                       </div>
                       <!-- question 5 -->
@@ -191,7 +192,7 @@
                         <input id="tab-five" type="checkbox" name="tabs">
                         <label for="tab-five">¿Es fácil usar la plataforma de aprendizaje?</label>
                         <div class="tab-content">
-                          <p>¡Nuestra plataforma es amigable y muy fácil de usar! Además, cuando actives tu curso, tendrás un tour completo, a través de una videollamada, en el que uno de nuestros asesores te enseñará cómo usar nuestras herramientas y todo lo que necesitas saber para aclarar tus dudas con nuestro equipo de soporte, cómo asistir a tus clases en vivo y mucho más.</p>
+                          <p>¡Nuestra plataforma es amigable y muy fácil de usar! Nuestro manual de usuario te birnda una experiencia amigable para concer todo lo que debes saber sobre nuestr Plataforma Flux Academy.</p>
                         </div>
                       </div>
                       <!-- question 6 -->
