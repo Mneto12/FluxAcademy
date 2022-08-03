@@ -30,7 +30,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inscríbete hoy</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="/vista/login/login.php">Acceso a Flux Academy</a></li>
-                        <li class="nav-item d-none d-sm-inline-block"><a href='/vista/somos/nosotros.php' class="nav-link" style="cursor:pointer ;">Ayuda</a></li>
+                        <li class="nav-item d-none d-sm-inline-block"><a href='https://www.flipbookpdf.net/web/site/b6d6743756611bbffb26176894d331b3ebc43cf6202208.pdf.html' class="nav-link" style="cursor:pointer ;">Ayuda</a></li>
                     </ul>
                 </div>
             </div>
