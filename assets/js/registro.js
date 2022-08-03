@@ -425,7 +425,9 @@
               isFechaValid = checkFecha(),
               isEmailValid = checkEmail(),
               isPasswordValid = checkPassword(),
-              isConfirmImagenValid = checkImagen();
+              isConfirmImagenValid = checkImagen(),
+              isPreguntaValid = checkPregunta(),
+              isRespuestaValid = checkRespuesta()
   
         let isFormValid = isCedulaValid &&
               isNombreValid &&
@@ -435,7 +437,9 @@
               isUsernameValid &&
               isEmailValid &&
               isPasswordValid &&
-              isConfirmImagenValid;
+              isConfirmImagenValid &&
+              isPreguntaValid &&
+              isRespuestaValid;
   
               if (isFormValid) {
                 btn.removeAttribute('disabled');

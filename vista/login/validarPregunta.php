@@ -13,13 +13,17 @@ if(isset($_POST['btnVerificar'])){
     }
 
     $correo=$_POST['email'];
-    echo $_POST['email'];
 
     $consultaPregunta = "Select * from usuario where correo = '".$correo."'";
     $resultadoConsulta = $conn->query($consultaPregunta);
     $registros = $resultadoConsulta->fetch_all(MYSQLI_ASSOC);
     $datos = json_encode($registros);
 }
+?>
+
+<?php
+    foreach ($registros as $registro) {
+    if($correo == $registro['correo']){
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +49,9 @@ foreach ($registros as $registro) {
 
     <div class="container">
         <form id="olvido" class="form" method="POST" enctype="multipart/form-data" action="editarCon.php">
-            <h1>Recuperar contrase&ntildea</h1>
+            <p>2 - 4 Pregunta de seguridad</p>
 
+            <hr class="spacer--desktop">
 
             <div class="form-field form--pregunta">
                 <div class="leyenda">
@@ -83,3 +88,22 @@ foreach ($registros as $registro) {
 </body>
 
 </html>
+
+<?php
+    }
+}
+?>
+
+
+<?php
+    foreach ($registros as $registro) {
+    if($correo !== $registro['correo']){
+        echo 'no';
+?>
+    
+    
+
+<?php
+    }
+}
+?>

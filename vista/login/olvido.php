@@ -18,6 +18,7 @@
     <div class="container">
         <form id="olvido" class="form" method="POST" enctype="multipart/form-data" action="validarPregunta.php">
             <h1>Recuperar contrase&ntildea</h1>
+            <p>1 - 4 Confirmar correo</p>
 
             <hr class="spacer--desktop">
 
@@ -29,17 +30,6 @@
                 <input type="text" name="email" id="email" autocomplete="off" placeholder="Ingresa tu correo">
                 <small class="oculto small">
                     
-                </small>
-            </div>
-
-            <div class="form-field form--pregunta oculto">
-                <div class="leyenda">
-                    <span class="material-icons-outlined">question_mark</span>
-                    <p class="space">hola</p>
-                </div>
-                <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Ingrese su respuesta" onkeypress="return onlyTextKey(event)">
-                <small class="oculto small">
-
                 </small>
             </div>
 
