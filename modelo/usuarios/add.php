@@ -22,6 +22,8 @@
     isset($_POST['correo']) ? $correo = htmlspecialchars($_POST['correo']) : $mensaje = true;
     isset($_POST['imagen']) ? $imagen = htmlspecialchars($_POST['imagen']) : $mensaje = true;
     isset($_POST['contrasena']) ? $contrasena = htmlspecialchars($_POST['contrasena']) : $mensaje = true;
+    isset($_POST['pregunta']) ? $pregunta = htmlspecialchars($_POST['pregunta']) : $mensaje = true;
+    isset($_POST['respuesta']) ? $respuesta = htmlspecialchars($_POST['respuesta']) : $mensaje = true;
 
     $sqlconsulta = 'SELECT cedula, nombre_usuario, correo FROM usuario WHERE cedula='.$cedula.' OR nombre_usuario="'.$nombre_usuario.'" OR correo="'.$correo.'"';
 
@@ -32,7 +34,7 @@
         return;
     }
 
-    $sql = "INSERT INTO usuario (cedula, nombre, apellido, genero, fecha_nacimiento, nombre_usuario, correo, contrasena, imagen) VALUES ('$cedula', '$nombre', '$apellido', '$genero', STR_TO_DATE('$fecha_nacimiento','%Y-%m-%d'), '$nombre_usuario', '$correo', '$contrasena', '$imagen')";
+    $sql = "INSERT INTO usuario (cedula, nombre, apellido, genero, fecha_nacimiento, nombre_usuario, correo, contrasena, imagen, pregunta, respuesta) VALUES ('$cedula', '$nombre', '$apellido', '$genero', STR_TO_DATE('$fecha_nacimiento','%Y-%m-%d'), '$nombre_usuario', '$correo', '$contrasena', '$imagen', '$pregunta', '$respuesta')";
     
     $resultado = $mysqli->query($sql);
 

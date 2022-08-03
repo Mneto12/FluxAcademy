@@ -195,6 +195,10 @@ p {
     outline: none;
 }
 
+.btn--form {
+    margin-left: 1rem;
+}
+
 /* GENERO */
 
 .form-field--genero {
@@ -218,6 +222,12 @@ p {
 
 .spacer {
     margin: 1.500rem 0;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.spacer--desktop {
+    margin: 1rem 0;
     background-color: black;
     opacity: 0.2;
 }

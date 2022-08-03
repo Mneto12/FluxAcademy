@@ -152,6 +152,31 @@
             </div>
 
             <div class="form-field">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">question_mark</span>
+                    <p class="space">Pregunta de seguridad</p>
+                </div>
+                <input type="text" name="pregunta" id="pregunta" autocomplete="off" placeholder="Ingrese una pregunta" onkeypress="return onlyTextKey(event)">
+                <small class="oculto small">
+
+                </small>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="form-field">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">question_answer</span>
+                    <p class="space">Respuesta a la pregunta</p>
+                </div>
+                <input type="text" name="respuesta" id="respuesta" autocomplete="off" placeholder="Ingrese la respuesta" onkeypress="return onlyTextKey(event)">
+                <small class="oculto small">
+
+                </small>
+            </div>
+
+
+            <div class="form-field btn--form">
                 <button type="button" name="guardar" class="btn" onclick="submitFormCrearEditar('true')">Registrar</button>
             </div>
             <div class="form-field">

@@ -14,9 +14,12 @@
 <div class="img--back"></div>
 
 <body>
+
     <div class="container">
-        <form id="signup" class="form">
+        <form id="olvido" class="form" method="POST" enctype="multipart/form-data" action="validarPregunta.php">
             <h1>Recuperar contrase&ntildea</h1>
+
+            <hr class="spacer--desktop">
 
             <div class="form-field">
                 <div class="leyenda">
@@ -29,15 +32,27 @@
                 </small>
             </div>
 
+            <div class="form-field form--pregunta oculto">
+                <div class="leyenda">
+                    <span class="material-icons-outlined">question_mark</span>
+                    <p class="space">hola</p>
+                </div>
+                <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Ingrese su respuesta" onkeypress="return onlyTextKey(event)">
+                <small class="oculto small">
+
+                </small>
+            </div>
+
             <div class="form-field">
-                <button type="submit" class="btn" onclick="check(3)">
+                <button type="submit" class="btn" name="btnVerificar">
                     <span class="material-icons-outlined">restart_alt</span>
-                    Recuperar
+                    Verificar
                 </button>
             </div>
 
         </form>
     </div>
+
 </body>
 
 </html>

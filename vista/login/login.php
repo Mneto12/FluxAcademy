@@ -46,14 +46,14 @@
 
             
             <div class="form-field">
-                <button type="submit" class="btn" name="btningresar" >
+                <button type="submit" class="btn" name="btningresar">
                     <span class="material-icons-outlined">login</span>
                     Iniciar sesion
                 </button>
             </div>
 
             <div class="form-field formFlex">
-                <a href="./olvido.html" target="_blank">¿Olvidaste tu contraseña?</a>
+                <a href="./olvido.php" target="_blank">¿Olvidaste tu contraseña?</a>
                 <a href="./registro.php">Registro</a>
                 <a href="./admin.php">Entrar como administrador</a>
             </div>
