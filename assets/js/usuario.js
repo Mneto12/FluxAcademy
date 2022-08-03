@@ -23,6 +23,8 @@ function mostrarDetalles(id) {
              $("#nombre_usuarioDetalle").val(jsonData[0].nombre_usuario);
              $("#correoDetalle").val(jsonData[0].correo);
              $("#contrasenaDetalle").val(jsonData[0].contrasena);
+             $("#preguntaDetalle").val(jsonData[0].pregunta);
+             $("#respuestaDetalle").val(jsonData[0].respuesta);
              $("#imagenDetalle").attr("src","../../assets/img/"+jsonData[0].imagen);
            }
          })         
@@ -80,6 +82,8 @@ function EditUsuario(id) {
              $("#correoEdit").val(jsonData[0].correo);
              $("#contrasenaEdit").val(jsonData[0].contrasena);
              $("#imagenEdit").val(jsonData[0].imagen);
+             $("#preguntaEdit").val(jsonData[0].pregunta);
+             $("#respuestaEdit").val(jsonData[0].respuesta);
 
             }
           })         

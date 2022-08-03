@@ -185,6 +185,22 @@
             <input hidden type="text" name="imagen" id="imagen">
           </div>
 
+          <div class="form-group">
+            <label for="pregunta"><strong>Pregunta de seguridad</strong></label>
+            <input type="text" required class="form-control" name="pregunta" id="pregunta" placeholder="Ingrese pregunta..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label for="respuesta"><strong>Respuesta de seguridad</strong></label>
+            <input type="text" required class="form-control" name="respuesta" id="respuesta" placeholder="Ingrese respuesta..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+
+            </small>
+          </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
             <button type="button" class="btn btn-info" onclick="submitFormCrearEditar('modal')">Verificar</button>
@@ -250,6 +266,14 @@
                 <div class="form-group">
                   <label for="contrasenaDetalle"><strong>Contraseña</strong></label>
                   <input type="text" disabled class="form-control" name="contrasenaDetalle" id="contrasenaDetalle">
+                </div>
+                <div class="form-group">
+                  <label for="preguntaDetalle"><strong>Pregunta de seguridad</strong></label>
+                  <input type="text" disabled class="form-control" name="preguntaDetalle" id="preguntaDetalle">
+                </div>
+                <div class="form-group">
+                  <label for="respuestaDetalle"><strong>Respuesta de seguridad</strong></label>
+                  <input type="text" disabled class="form-control" name="respuestaDetalle" id="respuestaDetalle">
                 </div>
 
                 <div class="modal-footer">
@@ -364,6 +388,22 @@
 
           <div class="form-group">
             <input hidden type="text" name="imagenEdit" id="imagenEdit">
+          </div>
+
+          <div class="form-group">
+            <label for="preguntaEdit"><strong>Pregunta de seguridad</strong></label>
+            <input type="text" required class="form-control" name="preguntaEdit" id="preguntaEdit" placeholder="Ingrese pregunta..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label for="respuestaEdit"><strong>Respuesta de seguridad</strong></label>
+            <input type="text" required class="form-control" name="respuestaEdit" id="respuestaEdit" placeholder="Ingrese respuesta..." onkeypress="return onlyTextKey(event)">
+            <small class="oculto small">
+
+            </small>
           </div>
 
           <div class="modal-footer modal--footer">

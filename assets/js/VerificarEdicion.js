@@ -13,6 +13,9 @@ const Verificar = (validador) => {
     const inputContrasena = document.getElementById("contrasenaEdit");
     const inputFile = document.getElementById("filechooserEdit");
     const btn = document.querySelector('.btn--editar--usuario');
+    const inputPregunta = document.getElementById("preguntaEdit");
+    const inputRespuesta = document.getElementById("respuestaEdit");
+
 
         const checkCedula = () => {
             
@@ -166,6 +169,46 @@ const Verificar = (validador) => {
           }
           return valid;
         };
+
+        const checkPregunta = () => {
+  
+            let valid = false;
+        
+            const min = 3,
+                max = 20;
+        
+            const pregunta = inputPregunta.value.trim();
+        
+            if (!isRequired(pregunta)) {
+                showError(inputPregunta, 'Este campo no puede estar vacio');
+            } else if (!isBetween(pregunta.length, min, max)) {
+                showError(inputPregunta, `La pregunta debe de estar entre ${min} y ${max} caracteres.`)
+            } else {
+                showSuccess(inputPregunta);
+                valid = true;
+            }
+            return valid;
+        }
+    
+        const checkRespuesta = () => {
+      
+            let valid = false;
+        
+            const min = 2,
+                max = 40;
+        
+            const respuesta = inputRespuesta.value.trim();
+        
+            if (!isRequired(respuesta)) {
+                showError(inputRespuesta, 'Este campo no puede estar vacio');
+            } else if (!isBetween(respuesta.length, min, max)) {
+                showError(inputRespuesta, `La respuesta debe de estar entre ${min} y ${max} caracteres.`)
+            } else {
+                showSuccess(inputRespuesta);
+                valid = true;
+            }
+            return valid;
+        }
         
         const isEmailValid = (email) => {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -253,7 +296,9 @@ const Verificar = (validador) => {
               isFechaValid = checkFecha(),
               isEmailValid = checkEmail(),
               isPasswordValid = checkPassword(),
-              isConfirmImagenValid = checkImagen();
+              isConfirmImagenValid = checkImagen(),
+              isPreguntaValid = checkPregunta(),
+              isRespuestaValid = checkRespuesta()
   
         let isFormValid = isFechaValid &&
               isCedulaValid &&
@@ -263,7 +308,9 @@ const Verificar = (validador) => {
               isUsernameValid &&
               isEmailValid &&
               isPasswordValid &&
-              isConfirmImagenValid;
+              isConfirmImagenValid &&
+              isPreguntaValid &&
+              isRespuestaValid;
   
               if (isFormValid) {
                 btn.removeAttribute('disabled');

@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="container" data-aos="fade-up">
-                <img class="image--guy" src="./assets/img/fluxacademy.png" alt="">
+                <img class="image--guy" src="./assets/img/fluxbrand.png" alt="">
             </div>
         </section>
         <!-- Testimonials section-->

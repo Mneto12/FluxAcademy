@@ -13,6 +13,8 @@
   const imagen = document.getElementById("filechooser");
   const form = document.querySelector('#formUsuario');
   const formImagen = document.querySelector('.form--imagen');
+  const preguntaEl = document.querySelector('#pregunta');
+  const respuestaEl = document.querySelector('#respuesta');
   
   const submitFormCrearEditar = (validador) => { 
 
@@ -41,7 +43,7 @@
           let valid = false;
       
           const min = 3,
-              max = 12;
+              max = 15;
       
           const nombre = nombreEl.value.trim();
       
@@ -61,7 +63,7 @@
           let valid = false;
       
           const min = 3,
-              max = 12;
+              max = 15;
       
           const apellido = apellidoEl.value.trim();
       
@@ -124,7 +126,7 @@
           let valid = false;
       
           const min = 3,
-              max = 25;
+              max = 20;
       
           const username = usernameEl.value.trim();
       
@@ -202,6 +204,46 @@
         }
         return valid;
       };
+
+      const checkPregunta = () => {
+  
+        let valid = false;
+    
+        const min = 3,
+            max = 20;
+    
+        const pregunta = preguntaEl.value.trim();
+    
+        if (!isRequired(pregunta)) {
+            showError(preguntaEl, 'Este campo no puede estar vacio');
+        } else if (!isBetween(pregunta.length, min, max)) {
+            showError(preguntaEl, `La pregunta debe de estar entre ${min} y ${max} caracteres.`)
+        } else {
+            showSuccess(preguntaEl);
+            valid = true;
+        }
+        return valid;
+    }
+
+    const checkRespuesta = () => {
+  
+        let valid = false;
+    
+        const min = 2,
+            max = 40;
+    
+        const respuesta = respuestaEl.value.trim();
+    
+        if (!isRequired(respuesta)) {
+            showError(respuestaEl, 'Este campo no puede estar vacio');
+        } else if (!isBetween(respuesta.length, min, max)) {
+            showError(respuestaEl, `La respuesta debe de estar entre ${min} y ${max} caracteres.`)
+        } else {
+            showSuccess(respuestaEl);
+            valid = true;
+        }
+        return valid;
+    }
       
       const isEmailValid = (email) => {
           const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -314,7 +356,9 @@
             isEmailValid = checkEmail(),
             isPasswordValid = checkPassword(),
             isConfirmPasswordValid = checkConfirmPassword(),
-            isConfirmImagenValid = checkImagen();
+            isConfirmImagenValid = checkImagen(),
+            isPreguntaValid = checkPregunta(),
+            isRespuestaValid = checkRespuesta()
 
       let isFormValid = isCedulaValid &&
             isNombreValid &&
@@ -325,7 +369,9 @@
             isEmailValid &&
             isPasswordValid &&
             isConfirmPasswordValid &&
-            isConfirmImagenValid;
+            isConfirmImagenValid &&
+            isPreguntaValid &&
+            isRespuestaValid;
 
             if (isFormValid) {
               // Send data 
@@ -379,7 +425,9 @@
               isFechaValid = checkFecha(),
               isEmailValid = checkEmail(),
               isPasswordValid = checkPassword(),
-              isConfirmImagenValid = checkImagen();
+              isConfirmImagenValid = checkImagen(),
+              isPreguntaValid = checkPregunta(),
+              isRespuestaValid = checkRespuesta()
   
         let isFormValid = isCedulaValid &&
               isNombreValid &&
@@ -389,7 +437,9 @@
               isUsernameValid &&
               isEmailValid &&
               isPasswordValid &&
-              isConfirmImagenValid;
+              isConfirmImagenValid &&
+              isPreguntaValid &&
+              isRespuestaValid;
   
               if (isFormValid) {
                 btn.removeAttribute('disabled');

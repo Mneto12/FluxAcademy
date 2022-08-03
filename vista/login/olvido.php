@@ -14,9 +14,13 @@
 <div class="img--back"></div>
 
 <body>
+
     <div class="container">
-        <form id="signup" class="form">
+        <form id="olvido" class="form" method="POST" enctype="multipart/form-data" action="validarPregunta.php">
             <h1>Recuperar contrase&ntildea</h1>
+            <p>1 - 4 Confirmar correo</p>
+
+            <hr class="spacer--desktop">
 
             <div class="form-field">
                 <div class="leyenda">
@@ -30,14 +34,15 @@
             </div>
 
             <div class="form-field">
-                <button type="submit" class="btn" onclick="check(3)">
+                <button type="submit" class="btn" name="btnVerificar">
                     <span class="material-icons-outlined">restart_alt</span>
-                    Recuperar
+                    Verificar
                 </button>
             </div>
 
         </form>
     </div>
+
 </body>
 
 </html>
