@@ -96,11 +96,11 @@
                         <!-- Testimonial 1-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-1.jpg" alt="">
+                                <img src="./assets/img/testimonials-1.jpeg" alt="">
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Maria Jose</p>
-                                <p>"La plataforma es muy entretenida y con contenido de alto valor. Los videos y su contenido es excelente, es chevere tener esa interacción, eso es algo muy positivo"</p>
+                                <p>"La plataforma es muy entretenida y con contenido de alto valor. Los videos y sus contenido es excelente, es chevere tener esa interacción, eso es algo muy positivo"</p>
                                 <p class="subtitle">Maracaibo | Venezuela</p>
                             </div>
                             <div class="footer--card">
@@ -192,7 +192,7 @@
                         <input id="tab-five" type="checkbox" name="tabs">
                         <label for="tab-five">¿Es fácil usar la plataforma de aprendizaje?</label>
                         <div class="tab-content">
-                          <p>¡Nuestra plataforma es amigable y muy fácil de usar! Nuestro manual de usuario te brinda una experiencia amigable para conocer todo lo que debes saber sobre nuestra Plataforma Flux Academy.</p>
+                            <p>¡Nuestra plataforma es amigable y muy fácil de usar! Nuestro manual de usuario te birnda una experiencia amigable para concer todo lo que debes saber sobre nuestr Plataforma Flux Academy.</p>
                         </div>
                       </div>
                       <!-- question 6 -->
