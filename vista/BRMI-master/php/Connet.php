@@ -2,16 +2,16 @@
 error_reporting(E_PARSE);
 
 //Nombre de usuario de mysql
- const USER = "root";
+ const USER = "ul2al2uqhs423cdd";
 
 //Servidor de mysql
- const SERVER = "localhost"; 
+ const SERVER = "bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com"; 
 
 //Nombre de la base de datos
-const BD = "mydb";
+const BD = "bfcbdvyi6ggtzay9cgor";
 
 //Contraseña de myqsl
-const PASS = "";
+const PASS = "5CIsbSldPfe9YeAlC7ZW";
 
 //Carpeta donde se almacenaran las copias de seguridad
 const BACKUP_PATH =  "../backup/";

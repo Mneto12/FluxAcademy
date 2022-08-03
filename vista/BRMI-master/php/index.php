@@ -17,10 +17,10 @@
 				<div class="row">
 					<div class="col-sm-6">
 					<br>
-					<a href="./Backup.php" class="btn btn-info btn-lg">Realizar copia de seguridad</a> <br><br><br>
+					<a href="/vista/BRMI-master/php/Backup.php" class="btn btn-info btn-lg">Realizar copia de seguridad</a> <br><br><br>
 					</div>
 					<div class="col-sm-6">
-						<form action="./Restore.php" method="POST">
+						<form action="/vista/BRMI-master/php/Restore.php" method="POST">
 							<label>Selecciona un punto de restauración</label><br>
 							<select name="restorePoint">
 								<option value="" disabled="" selected="">Selecciona un punto de restauración</option>
