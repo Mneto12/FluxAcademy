@@ -192,6 +192,15 @@
                   </a>
                 </li>
               </ul>
+            <li class="nav-header">MANTENIMIENTO</li>
+            <li class="nav-item">
+              <a onclick="cargar_contenido('contenido_principal','BRMI-master/php/index.php')" class="nav-link" style="cursor:pointer ;">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  Respaldos
+                </p>
+              </a>
+            </li>
             </li>
           </ul>
         </nav>

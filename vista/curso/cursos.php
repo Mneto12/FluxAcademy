@@ -20,11 +20,11 @@ session_start();
           <div class="card-body">
             <h2 class="titulocard"><?php echo $cursos['nombre_curso'] ?></h2>
             <p class="card-text"><?php echo $cursos['descripcion'] ?></p>
-            <div class="card-footer">
-              <button name="edit" class="btn btn-success"  data-toggle="modal" 
-                                    data-target="#modalEdit" onclick="EditCurso(<?php echo $cursos['idCurso'] ?>)">
-                                    <i class="far"> Inscribir</i></button>
-            </div>
+          </div>
+          <div class="card-footer">
+            <button name="edit" class="btn btn-success"  data-toggle="modal" 
+                                  data-target="#modalEdit" onclick="EditCurso(<?php echo $cursos['idCurso'] ?>)">
+                                  <i class="far"> Inscribir</i></button>
           </div>
         </div>
         <div style="padding-right: 10px ;"></div>
