@@ -22,7 +22,7 @@ if(isset($_POST['btnVerificar'])){
 ?>
 
 <?php
-    foreach ($registros as $registro) {
+foreach($registros as $registro){
     if($correo == $registro['correo']){
 ?>
 
@@ -42,10 +42,6 @@ if(isset($_POST['btnVerificar'])){
 <div class="img--back"></div>
 
 <body>
-
-<?php
-foreach ($registros as $registro) {
-?>
 
     <div class="container">
         <form id="olvido" class="form" method="POST" enctype="multipart/form-data" action="editarCon.php">
@@ -84,26 +80,13 @@ foreach ($registros as $registro) {
 
         </form>
     </div>
-    <?php } ?>
 </body>
 
 </html>
 
 <?php
-    }
-}
-?>
-
-
-<?php
-    foreach ($registros as $registro) {
-    if($correo !== $registro['correo']){
-        echo 'no';
-?>
-    
-    
-
-<?php
+    }else{
+        echo "no";
     }
 }
 ?>

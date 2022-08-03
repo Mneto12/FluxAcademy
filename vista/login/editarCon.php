@@ -56,7 +56,7 @@ if(isset($_POST['btnVerificar'])){
                 <span class="material-icons-outlined">password</span>
                     <p class="space">Contraseña</p>
                 </div>
-                <input type="text" name="contrasena" id="contrasena" autocomplete="off" placeholder="Ingrese su contraseña">
+                <input type="password" name="contrasena" id="contrasena" autocomplete="off" placeholder="Ingrese su contraseña">
                 <small class="oculto small">
 
                 </small>
@@ -67,7 +67,7 @@ if(isset($_POST['btnVerificar'])){
                 <span class="material-icons-outlined">password</span>
                     <p class="space">Confirme contraseña</p>
                 </div>
-                <input type="text" name="confirmar" id="confirmar" autocomplete="off" placeholder="confirmar contraseña">
+                <input type="password" name="confirmar" id="confirmar" autocomplete="off" placeholder="confirmar contraseña">
                 <small class="oculto small">
 
                 </small>
