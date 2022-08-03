@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 if(isset($_POST['btnVerificar'])){
     
     $dbhost ="bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com";
@@ -18,6 +19,16 @@ if(isset($_POST['btnVerificar'])){
     $resultadoConsulta = $conn->query($consultaPregunta);
     $registros = $resultadoConsulta->fetch_all(MYSQLI_ASSOC);
     $datos = json_encode($registros);
+
+    if(count($registros) !=1){
+        
+        $mensaje = "Error: El correo no existe, ingrese un correo valido!";
+
+        header("Location: olvido.php?mensaje=$mensaje");
+
+    } else {
+        echo "<h1>Indique su respuesta</h1>";
+    }
 }
 ?>
 
@@ -85,8 +96,6 @@ foreach($registros as $registro){
 </html>
 
 <?php
-    }else{
-        echo "no";
     }
 }
 ?>

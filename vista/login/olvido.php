@@ -14,7 +14,17 @@
 <div class="img--back"></div>
 
 <body>
+<?php
+if(isset($_GET['mensaje'])){
+    $mensaje=$_GET["mensaje"];
+    ?>
+    <div>
+        <h3 style="color: #D8000C ; background-color: #FFBABA;"><?php echo $mensaje ?></h3>
+    </div>
+<?php
+}
 
+?>
     <div class="container">
         <form id="olvido" class="form" method="POST" enctype="multipart/form-data" action="validarPregunta.php">
             <h1>Recuperar contrase&ntildea</h1>
