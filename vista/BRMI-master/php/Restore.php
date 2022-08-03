@@ -9,10 +9,10 @@
 /**
  * Define database parameters here
  */
-define("DB_USER", 'root');
-define("DB_PASSWORD", '');
-define("DB_NAME", 'cursonline');
-define("DB_HOST", 'localhost');
+define("DB_USER", 'ul2al2uqhs423cdd');
+define("DB_PASSWORD", '5CIsbSldPfe9YeAlC7ZW');
+define("DB_NAME", 'bfcbdvyi6ggtzay9cgor');
+define("DB_HOST", 'bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com');
 define("BACKUP_DIR", '../backup'); // Comment this line to use same script's directory ('.')
 define("BACKUP_FILE", $_POST['restorePoint']); // Script will autodetect if backup file is gzipped based on .gz extension
 define("CHARSET", 'utf8');
@@ -293,3 +293,5 @@ $restoreDatabase->obfPrint("Resultado de la restauración: ".$result, 1);
 if (php_sapi_name() != "cli") {
     echo '</div>';
 }
+?>
+<h3>Para regresar a la página haga click aquí "<a href="/vista/index2.php" class="btn">Finalizado</a>"</h3>

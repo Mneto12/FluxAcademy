@@ -9,10 +9,10 @@
 /**
  * Define database parameters here
  */
-define("DB_USER", 'root');
-define("DB_PASSWORD", '');
-define("DB_NAME", 'cursonline');
-define("DB_HOST", 'localhost');
+define("DB_USER", 'ul2al2uqhs423cdd');
+define("DB_PASSWORD", '5CIsbSldPfe9YeAlC7ZW');
+define("DB_NAME", 'bfcbdvyi6ggtzay9cgor');
+define("DB_HOST", 'bfcbdvyi6ggtzay9cgor-mysql.services.clever-cloud.com');
 define("BACKUP_DIR", '../backup'); // Comment this line to use same script's directory ('.')
 define("TABLES", '*'); // Full backup
 //define("TABLES", 'table1, table2, table3'); // Partial backup
@@ -490,4 +490,6 @@ if (php_sapi_name() != "cli") {
     echo '</div>';
 }
 ?>
-<h1>hola mundo</h1>
+<h3>Para regresar a la página haga click aquí "<a href="/vista/index2.php" class="btn">Finalizado</a>"</h3>
+
+
