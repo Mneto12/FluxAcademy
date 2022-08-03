@@ -111,7 +111,7 @@
                         <!-- Testimonial 2-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-2.jpeg" alt="">
+                                <img src="./assets/img/testimonials-2.jpg" alt="">
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Carlos Rodriguez</p>
@@ -126,7 +126,7 @@
                         <!-- Testimonial 3-->
                         <div class="card">
                             <div class="header--card">
-                                <img src="./assets/img/testimonials-3.jpeg" alt="">
+                                <img src="./assets/img/testimonials-3.jpg" alt="">
                             </div>
                             <div class="body--card">
                                 <p class="subtitle">Andrea Sutherland</p>
@@ -192,7 +192,7 @@
                         <input id="tab-five" type="checkbox" name="tabs">
                         <label for="tab-five">¿Es fácil usar la plataforma de aprendizaje?</label>
                         <div class="tab-content">
-                          <p>¡Nuestra plataforma es amigable y muy fácil de usar! Nuestro manual de usuario te birnda una experiencia amigable para concer todo lo que debes saber sobre nuestr Plataforma Flux Academy.</p>
+                            <p>¡Nuestra plataforma es amigable y muy fácil de usar! Nuestro manual de usuario te birnda una experiencia amigable para concer todo lo que debes saber sobre nuestr Plataforma Flux Academy.</p>
                         </div>
                       </div>
                       <!-- question 6 -->
